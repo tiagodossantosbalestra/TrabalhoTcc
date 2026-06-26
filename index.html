@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Filmes Recomendados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Filmes Recomendados</h1>
+        <p class="subtitle">Uma seleção especial dividida por estilos para você escolher o que assistir hoje.</p>
+
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="sucessos">🎬 Sucessos</button>
+            <button class="filter-btn" data-filter="scifi">🚀 Ficção Científica</button>
+            <button class="filter-btn" data-filter="animacao">🎨 Animações</button>
+        </div>
+
+        <section class="category-section sucessos" data-category="sucessos">
+            <h2 class="category-title">🎬 Grandes Sucessos e Favoritos do Público</h2>
+            <ul class="movie-list">
+                <li class="movie-item">
+                    <div class="movie-title">Parasita (2019)</div>
+                    <div class="movie-desc">Mistura de suspense e comédia ácida que fez história no Oscar. Acompanha uma família criativa que se infiltra na rotina de uma família rica.</div>
+                </li>
+                <li class="movie-item">
+                    <div class="movie-title">Whiplash: Em Busca da Perfeição (2014)</div>
+                    <div class="movie-desc">Um drama intenso sobre um jovem baterista de jazz levado ao limite por seu instrutor implacável.</div>
+                </li>
+                <li class="movie-item">
+                    <div class="movie-title">Tudo em Todo Lugar ao Mesmo Tempo (2022)</div>
+                    <div class="movie-desc">Uma aventura genial e caótica pelo multiverso que foca na relação de uma família.</div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="category-section scifi" data-category="scifi">
+            <h2 class="category-title">🚀 Ficção Científica e Aventura</h2>
+            <ul class="movie-list">
+                <li class="movie-item">
+                    <div class="movie-title">A Chegada (2016)</div>
+                    <div class="movie-desc">Quando naves alienígenas pousam na Terra, uma linguista é chamada para tentar se comunicar com os visitantes. Inteligente e emocionante.</div>
+                </li>
+                <li class="movie-item">
+                    <div class="movie-title">Interstelar (2014)</div>
+                    <div class="movie-desc">Um grupo de astronautas viaja através de um buraco de minhoca para encontrar um novo lar para a humanidade. Visualmente espetacular.</div>
+                </li>
+                <li class="movie-item">
+                    <div class="movie-title">Karatê Kid: Lendas (2025)</div>
+                    <div class="movie-desc">Uma excelente opção recente que reúne astros de diferentes gerações da franquia em uma nova jornada de superação e artes marciais.</div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="category-section animacao" data-category="animacao">
+            <h2 class="category-title">🎨 Animações Fantásticas</h2>
+            <ul class="movie-list">
+                <li class="movie-item">
+                    <div class="movie-title">A Família Mitchell e a Revolta das Máquinas (2021)</div>
+                    <div class="movie-desc">Uma comédia hilária sobre uma família comum que se torna a única esperança da humanidade contra um apocalipse robô.</div>
+                </li>
+                <li class="movie-item">
+                    <div class="movie-title">Viva: A Vida é uma Festa (2017)</div>
+                    <div class="movie-desc">Uma linda celebração da música e da memória familiar baseada nas tradições mexicanas.</div>
+                </li>
+                <li class="movie-item">
+                    <div class="movie-title">Homem-Aranha: No Aranhaverso (2018)</div>
+                    <div class="movie-desc">Visualmente revolucionário, acompanha o jovem Miles Morales aprendendo a ser o herói de seu próprio universo.</div>
+                </li>
+            </ul>
+        </section>
+
+        <div class="footer">
+            Que tipo de história você está mais no clima de assistir hoje (comédia, suspense, romance)?
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+:root {
+    --bg-color: #0f172a;
+    --container-bg: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-sucessos: #f59e0b;
+    --accent-scifi: #3b82f6;
+    --accent-animacao: #ec4899;
+    --border-color: #334155;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--container-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Estilo dos Filtros */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.filter-btn.active {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+/* Categorias */
+.category-section {
+    margin-bottom: 40px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.sucessos .category-title { color: var(--accent-sucessos); border-image: linear-gradient(to right, var(--accent-sucessos), transparent) 1; }
+.scifi .category-title { color: var(--accent-scifi); border-image: linear-gradient(to right, var(--accent-scifi), transparent) 1; }
+.animacao .category-title { color: var(--accent-animacao); border-image: linear-gradient(to right, var(--accent-animacao), transparent) 1; }
+
+.movie-list {
+    list-style: none;
+}
+
+.movie-item {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.movie-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+}
+
+.movie-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.movie-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+}
