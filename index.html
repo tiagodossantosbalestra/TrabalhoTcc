@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>História do Streaming - TCC</title>
+    <title>História do Streaming e Recomendações - TCC</title>
     <style>
         * {
             box-sizing: border-box;
@@ -30,7 +30,7 @@
 
         header h1 {
             font-size: 2.5rem;
-            color: #E50914; /* Vermelho analógico ao streaming */
+            color: #E50914; 
             margin-bottom: 10px;
         }
 
@@ -39,7 +39,14 @@
             font-size: 1.1rem;
         }
 
-        .grid-plataformas {
+        h2.secao-titulo {
+            font-size: 1.8rem;
+            margin: 40px 0 20px 0;
+            border-left: 4px solid #E50914;
+            padding-left: 10px;
+        }
+
+        .grid-plataformas, .grid-filmes {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
@@ -88,6 +95,26 @@
             font-size: 1rem;
         }
 
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .badge-netflix { background-color: #E50914; color: #fff; }
+        .badge-prime { background-color: #00A8E1; color: #fff; }
+        .badge-disney { background-color: #113CCF; color: #fff; }
+
+        .nota {
+            color: #ffc107;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
         .card-footer {
             background-color: #1a1a1a;
             padding: 15px;
@@ -101,51 +128,73 @@
 
     <div class="container">
         <header>
-            <h1>A Evolução das Gigantes do Streaming</h1>
-            <p>Um breve resumo histórico sobre as plataformas que revolucionaram a indústria do cinema e da TV.</p>
+            <h1>Portal de Streaming & Entretenimento</h1>
+            <p>Conheça a história das plataformas e encontre sua próxima recomendação de filme.</p>
         </header>
 
-        <main class="grid-plataformas">
-            
-            <section class="card">
-                <div class="card-header netflix">Netflix</div>
-                <div class="card-body">
-                    <p>Fundada em 1997 por Reed Hastings e Marc Randolph como um serviço de locação de DVDs por correio, a Netflix revolucionou o mercado ao implementar um modelo de assinatura mensal sem multas por atraso.</p>
-                    
-                    <h4>A Virada de Chave:</h4>
-                    <p>Em 2007, a empresa lançou oficialmente seu serviço de <i>streaming</i> de vídeo sob demanda. A partir de 2013, com o lançamento de <i>House of Cards</i>, passou a produzir conteúdo original, tornando-se a pioneira absoluta e líder global do setor.</p>
-                </div>
-                <div class="card-footer">
-                    Lançamento do Streaming: 2007
-                </div>
-            </section>
+        <main>
+            <h2 class="secao-titulo">A Evolução das Gigantes</h2>
+            <div class="grid-plataformas">
+                
+                <section class="card">
+                    <div class="card-header netflix">Netflix</div>
+                    <div class="card-body">
+                        <p>Fundada em 1997 como locadora de DVDs por correio, revolucionou o mercado ao implementar a assinatura mensal. Em 2007, lançou o streaming e mudou a forma como o mundo consome mídia.</p>
+                    </div>
+                    <div class="card-footer">Lançamento: 2007</div>
+                </section>
 
-            <section class="card">
-                <div class="card-header prime-video">Amazon Prime Video</div>
-                <div class="card-body">
-                    <p>Nascido originalmente em 2006 nos EUA sob o nome <i>Amazon Unbox</i>, o serviço passou por diversas reformulações até ser atrelado ao pacote de benefícios da assinatura global "Amazon Prime".</p>
-                    
-                    <h4>A Virada de Chave:</h4>
-                    <p>A plataforma expandiu-se mundialmente focando em um ecossistema de valor agregado (frete grátis, música e livros). Consolidou sua relevância investindo bilhões de dólares em produções de fantasia e ficção científica de grande escala, além da aquisição do histórico estúdio MGM.</p>
-                </div>
-                <div class="card-footer">
-                    Expansão Global: 2016
-                </div>
-            </section>
+                <section class="card">
+                    <div class="card-header prime-video">Prime Video</div>
+                    <div class="card-body">
+                        <p>Surgido em 2006, consolidou-se ao integrar o pacote global Amazon Prime. Destaca-se por grandes investimentos em produções originais e pela aquisição de estúdios tradicionais.</p>
+                    </div>
+                    <div class="card-footer">Expansão Global: 2016</div>
+                </section>
 
-            <section class="card">
-                <div class="card-header disney-plus">Disney+</div>
-                <div class="card-body">
-                    <p>Diferente das concorrentes que nasceram no ambiente puramente tecnológico, o Disney+ foi lançado em 2019 com a força da maior empresa de mídia e entretenimento tradicional do mundo.</p>
-                    
-                    <h4>A Virada de Chave:</h4>
-                    <p>A plataforma baseou sua estratégia no seu valioso e inigualável catálogo de propriedade intelectual, reunindo em um só lugar as franquias Disney, Pixar, Marvel, Star Wars e National Geographic, atingindo marcas históricas de assinantes em tempo recorde.</p>
-                </div>
-                <div class="card-footer">
-                    Lançamento Oficial: 2019
-                </div>
-            </section>
+                <section class="card">
+                    <div class="card-header disney-plus">Disney+</div>
+                    <div class="card-body">
+                        <p>Lançado em 2019, o serviço apoia-se no peso de marcas icônicas como Pixar, Marvel, Star Wars e National Geographic, alcançando recordes de público em tempo recorde.</p>
+                    </div>
+                    <div class="card-footer">Lançamento: 2019</div>
+                </section>
+            </div>
 
+            <h2 class="secao-titulo">Filmes Recomendados</h2>
+            <div class="grid-filmes">
+
+                <article class="card">
+                    <div class="card-body">
+                        <span class="badge badge-netflix">Netflix</span>
+                        <h3>Glass Onion: Um Mistério Knives Out</h3>
+                        <div class="nota">★ 7.7/10 (Avaliação)</div>
+                        <p>O detetve Benoit Blanc viaja para a Grécia para desvendar um mistério envolvendo um bilionário da tecnologia e seu grupo de amigos peculiares. Um excelente filme de investigação e comédia.</p>
+                    </div>
+                    <div class="card-footer">Gênero: Mistério / Comédia</div>
+                </article>
+
+                <article class="card">
+                    <div class="card-body">
+                        <span class="badge badge-prime">Prime Video</span>
+                        <h3>O Pacto (The Covenant)</h3>
+                        <div class="nota">★ 7.5/10 (Avaliação)</div>
+                        <p>Durante a guerra, um intérprete local arrisca a própria vida para carregar um sargento ferido por quilômetros através de um terreno hostil. Um drama de ação intenso e focado em lealdade.</p>
+                    </div>
+                    <div class="card-footer">Gênero: Ação / Drama</div>
+                </article>
+
+                <article class="card">
+                    <div class="card-body">
+                        <span class="badge badge-disney">Disney+</span>
+                        <h3>Soul</h3>
+                        <div class="nota">★ 8.1/10 (Avaliação)</div>
+                        <p>Um professor de música de ensino médio que sonhava em ser músico de jazz sofre um acidente que separa sua alma de seu corpo, levando-o a uma jornada emocionante sobre o real sentido da vida.</p>
+                    </div>
+                    <div class="card-footer">Gênero: Animação / Família</div>
+                </article>
+
+            </div>
         </main>
     </div>
 
