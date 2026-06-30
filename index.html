@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>História do Streaming e Recomendações - TCC</title>
+    <title>Portal de Streaming - TCC</title>
     <style>
         * {
             box-sizing: border-box;
@@ -13,7 +13,7 @@
         }
 
         body {
-            background-color: #141414;
+            background-color: #0b0c10;
             color: #ffffff;
             padding: 40px 20px;
         }
@@ -30,97 +30,170 @@
 
         header h1 {
             font-size: 2.5rem;
-            color: #E50914; 
+            color: #66fcf1; /* Tom neon tecnológico */
             margin-bottom: 10px;
         }
 
         header p {
-            color: #aaa;
+            color: #c5c6c7;
             font-size: 1.1rem;
         }
 
         h2.secao-titulo {
             font-size: 1.8rem;
-            margin: 40px 0 20px 0;
-            border-left: 4px solid #E50914;
-            padding-left: 10px;
+            margin: 50px 0 25px 0;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .grid-plataformas, .grid-filmes {
+        /* ------------------------------------------------------------- */
+        /* ESTILO 1: PLATAFORMAS (Estilo Cards Clássicos de Informação) */
+        /* ------------------------------------------------------------- */
+        .grid-plataformas {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 25px;
         }
 
-        .card {
-            background-color: #1f1f1f;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.7);
-        }
-
-        .card-header {
-            padding: 20px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-align: center;
-            border-bottom: 2px solid rgba(255,255,255,0.1);
-        }
-
-        /* Cores temáticas das marcas */
-        .netflix { border-top: 5px solid #E50914; color: #E50914; }
-        .prime-video { border-top: 5px solid #00A8E1; color: #00A8E1; }
-        .disney-plus { border-top: 5px solid #113CCF; color: #113CCF; }
-
-        .card-body {
+        .card-plataforma {
+            background-color: #1f2833;
+            border-radius: 4px;
             padding: 25px;
-            flex-grow: 1;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
             line-height: 1.6;
-            color: #ddd;
+        }
+
+        .card-plataforma h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .netflix-txt { color: #E50914; border-bottom: 2px solid #E50914; display: inline-block; padding-bottom: 2px; }
+        .prime-txt { color: #00A8E1; border-bottom: 2px solid #00A8E1; display: inline-block; padding-bottom: 2px; }
+        .disney-txt { color: #113CCF; border-bottom: 2px solid #113CCF; display: inline-block; padding-bottom: 2px; }
+
+        .card-plataforma p {
+            color: #c5c6c7;
+            margin-top: 10px;
             font-size: 0.95rem;
         }
 
-        .card-body h4 {
+        /* ------------------------------------------------------------- */
+        /* ESTILO 2: FILMES (Estilo Moderno de Entretenimento / Cinema)   */
+        /* ------------------------------------------------------------- */
+        .lista-filmes {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .filme-card {
+            display: flex;
+            background: rgba(31, 40, 51, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .filme-card:hover {
+            transform: scale(1.01);
+            border-color: #66fcf1;
+            box-shadow: 0 10px 30px rgba(102, 252, 241, 0.1);
+        }
+
+        /* Simulação do Poster do Filme do lado esquerdo */
+        .filme-poster-shill {
+            width: 140px;
+            background: #11141a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            flex-shrink: 0;
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .filme-conteudo {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .filme-topo {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .filme-titulo {
+            font-size: 1.4rem;
             color: #fff;
-            margin-top: 15px;
-            margin-bottom: 5px;
-            font-size: 1rem;
+            font-weight: 600;
         }
 
-        .badge {
-            display: inline-block;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .badge-netflix { background-color: #E50914; color: #fff; }
-        .badge-prime { background-color: #00A8E1; color: #fff; }
-        .badge-disney { background-color: #113CCF; color: #fff; }
-
-        .nota {
-            color: #ffc107;
-            font-weight: bold;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-        }
-
-        .card-footer {
-            background-color: #1a1a1a;
-            padding: 15px;
-            text-align: center;
+        .filme-meta {
+            display: flex;
+            gap: 15px;
             font-size: 0.85rem;
-            color: #888;
+            color: #95a5a6;
+            margin-bottom: 12px;
+            align-items: center;
+        }
+
+        .nota-tag {
+            color: #f1c40f;
+            font-weight: bold;
+        }
+
+        .filme-sinopse {
+            color: #bdc3c7;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        /* Badges Minimalistas para onde assistir */
+        .stream-badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .b-netflix { background: rgba(229, 9, 20, 0.2); color: #ff4d58; border: 1px solid #E50914; }
+        .b-prime { background: rgba(0, 168, 225, 0.2); color: #33c2f5; border: 1px solid #00A8E1; }
+        .b-disney { background: rgba(17, 60, 207, 0.2); color: #547eff; border: 1px solid #113CCF; }
+
+        .btn-detalhes {
+            align-self: flex-start;
+            background: transparent;
+            border: 1px solid #66fcf1;
+            color: #66fcf1;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+
+        .btn-detalhes:hover {
+            background: #66fcf1;
+            color: #0b0c10;
+        }
+
+        /* Responsividade para o card de filme deitar no mobile */
+        @media (max-width: 600px) {
+            .filme-card { flex-direction: column; }
+            .filme-poster-shill { width: 100%; height: 100px; border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+            .filme-topo { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
@@ -129,69 +202,93 @@
     <div class="container">
         <header>
             <h1>Portal de Streaming & Entretenimento</h1>
-            <p>Conheça a história das plataformas e encontre sua próxima recomendação de filme.</p>
+            <p>Conheça o contexto histórico e navegue pelas indicações exclusivas.</p>
         </header>
 
         <main>
-            <h2 class="secao-titulo">A Evolução das Gigantes</h2>
+            <h2 class="secao-titulo">Contexto Histórico</h2>
             <div class="grid-plataformas">
                 
-                <section class="card">
-                    <div class="card-header netflix">Netflix</div>
-                    <div class="card-body">
-                        <p>Fundada em 1997 como locadora de DVDs por correio, revolucionou o mercado ao implementar a assinatura mensal. Em 2007, lançou o streaming e mudou a forma como o mundo consome mídia.</p>
-                    </div>
-                    <div class="card-footer">Lançamento: 2007</div>
+                <section class="card-plataforma">
+                    <h3 class="netflix-txt">Netflix</h3>
+                    <p>Fundada em 1997 como locadora de DVDs físicos entregues via correio. Foi pioneira em lançar a tecnologia VoD (Video on Demand) no ano de 2007 e a produzir conteúdo autoral escalável no mundo todo.</p>
                 </section>
 
-                <section class="card">
-                    <div class="card-header prime-video">Prime Video</div>
-                    <div class="card-body">
-                        <p>Surgido em 2006, consolidou-se ao integrar o pacote global Amazon Prime. Destaca-se por grandes investimentos em produções originais e pela aquisição de estúdios tradicionais.</p>
-                    </div>
-                    <div class="card-footer">Expansão Global: 2016</div>
+                <section class="card-plataforma">
+                    <h3 class="prime-txt">Prime Video</h3>
+                    <p>Braço de mídia fundado pela gigante Amazon. Cresceu exponencialmente ao unificar entretenimento e entregas rápidas na assinatura Prime, destacando-se pela compra de estúdios clássicos como a MGM.</p>
                 </section>
 
-                <section class="card">
-                    <div class="card-header disney-plus">Disney+</div>
-                    <div class="card-body">
-                        <p>Lançado em 2019, o serviço apoia-se no peso de marcas icônicas como Pixar, Marvel, Star Wars e National Geographic, alcançando recordes de público em tempo recorde.</p>
-                    </div>
-                    <div class="card-footer">Lançamento: 2019</div>
+                <section class="card-plataforma">
+                    <h3 class="disney-txt">Disney+</h3>
+                    <p>Lançada em 2019, focou estrategicamente em suas propriedades intelectuais exclusivas de grande apelo nostálgico e comercial, incluindo estúdios de animação, heróis e sagas de ficção científica.</p>
                 </section>
             </div>
 
-            <h2 class="secao-titulo">Filmes Recomendados</h2>
-            <div class="grid-filmes">
+            <h2 class="secao-titulo">Sugestões do Sistema</h2>
+            <div class="lista-filmes">
 
-                <article class="card">
-                    <div class="card-body">
-                        <span class="badge badge-netflix">Netflix</span>
-                        <h3>Glass Onion: Um Mistério Knives Out</h3>
-                        <div class="nota">★ 7.7/10 (Avaliação)</div>
-                        <p>O detetve Benoit Blanc viaja para a Grécia para desvendar um mistério envolvendo um bilionário da tecnologia e seu grupo de amigos peculiares. Um excelente filme de investigação e comédia.</p>
+                <article class="filme-card">
+                    <div class="filme-poster-shill">🔍</div>
+                    <div class="filme-conteudo">
+                        <div>
+                            <div class="filme-topo">
+                                <h3 class="filme-titulo">Glass Onion: Um Mistério Knives Out</h3>
+                                <span class="stream-badge b-netflix">Netflix</span>
+                            </div>
+                            <div class="filme-meta">
+                                <span class="nota-tag">★ 7.7</span>
+                                <span>•</span>
+                                <span>Mistério / Comédia</span>
+                                <span>•</span>
+                                <span>2h 19m</span>
+                            </div>
+                            <p class="filme-sinopse">O detetive Benoit Blanc viaja para a Grécia para desvendar um intrincado quebra-cabeça envolvendo um bilionário excêntrico da tecnologia e seu seleto grupo de amigos de longa data.</p>
+                        </div>
+                        <button class="btn-detalhes">Ver Mais Detalhes</button>
                     </div>
-                    <div class="card-footer">Gênero: Mistério / Comédia</div>
                 </article>
 
-                <article class="card">
-                    <div class="card-body">
-                        <span class="badge badge-prime">Prime Video</span>
-                        <h3>O Pacto (The Covenant)</h3>
-                        <div class="nota">★ 7.5/10 (Avaliação)</div>
-                        <p>Durante a guerra, um intérprete local arrisca a própria vida para carregar um sargento ferido por quilômetros através de um terreno hostil. Um drama de ação intenso e focado em lealdade.</p>
+                <article class="filme-card">
+                    <div class="filme-poster-shill">🛡️</div>
+                    <div class="filme-conteudo">
+                        <div>
+                            <div class="filme-topo">
+                                <h3 class="filme-titulo">O Pacto (Guy Ritchie's The Covenant)</h3>
+                                <span class="stream-badge b-prime">Prime Video</span>
+                            </div>
+                            <div class="filme-meta">
+                                <span class="nota-tag">★ 7.5</span>
+                                <span>•</span>
+                                <span>Ação / Drama</span>
+                                <span>•</span>
+                                <span>2h 03m</span>
+                            </div>
+                            <p class="filme-sinopse">Durante o conflito no Afeganistão, um intérprete local arrisca sua própria vida e cruza desertos perigosos carregando um sargento norte-americano ferido, em uma marcante jornada de honra.</p>
+                        </div>
+                        <button class="btn-detalhes">Ver Mais Detalhes</button>
                     </div>
-                    <div class="card-footer">Gênero: Ação / Drama</div>
                 </article>
 
-                <article class="card">
-                    <div class="card-body">
-                        <span class="badge badge-disney">Disney+</span>
-                        <h3>Soul</h3>
-                        <div class="nota">★ 8.1/10 (Avaliação)</div>
-                        <p>Um professor de música de ensino médio que sonhava em ser músico de jazz sofre um acidente que separa sua alma de seu corpo, levando-o a uma jornada emocionante sobre o real sentido da vida.</p>
+                <article class="filme-card">
+                    <div class="filme-poster-shill">🎹</div>
+                    <div class="filme-conteudo">
+                        <div>
+                            <div class="filme-topo">
+                                <h3 class="filme-titulo">Soul</h3>
+                                <span class="stream-badge b-disney">Disney+</span>
+                            </div>
+                            <div class="filme-meta">
+                                <span class="nota-tag">★ 8.1</span>
+                                <span>•</span>
+                                <span>Animação / Família</span>
+                                <span>•</span>
+                                <span>1h 40m</span>
+                            </div>
+                            <p class="filme-sinopse">Um dedicado pianista de Jazz sofre um acidente no dia mais importante da sua carreira. Sua alma é transportada para um centro cósmico de treinamento onde ele descobre o significado da vida.</p>
+                        </div>
+                        <button class="btn-detalhes">Ver Mais Detalhes</button>
                     </div>
-                    <div class="card-footer">Gênero: Animação / Família</div>
                 </article>
 
             </div>
