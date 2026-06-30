@@ -3,96 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Filmes Recomendados</title>
-    <link rel="stylesheet" href="style.css">
+    <title>História do Streaming - TCC</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #141414;
+            color: #ffffff;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #E50914; /* Vermelho analógico ao streaming */
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #aaa;
+            font-size: 1.1rem;
+        }
+
+        .grid-plataformas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: #1f1f1f;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+        }
+
+        .card-header {
+            padding: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+        }
+
+        /* Cores temáticas das marcas */
+        .netflix { border-top: 5px solid #E50914; color: #E50914; }
+        .prime-video { border-top: 5px solid #00A8E1; color: #00A8E1; }
+        .disney-plus { border-top: 5px solid #113CCF; color: #113CCF; }
+
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+            line-height: 1.6;
+            color: #ddd;
+            font-size: 0.95rem;
+        }
+
+        .card-body h4 {
+            color: #fff;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .card-footer {
+            background-color: #1a1a1a;
+            padding: 15px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
-    
+
     <div class="container">
+        <header>
+            <h1>A Evolução das Gigantes do Streaming</h1>
+            <p>Um breve resumo histórico sobre as plataformas que revolucionaram a indústria do cinema e da TV.</p>
+        </header>
+
+        <main class="grid-plataformas">
             
-        <h1>Filmes Recomendados</h1>
+            <section class="card">
+                <div class="card-header netflix">Netflix</div>
+                <div class="card-body">
+                    <p>Fundada em 1997 por Reed Hastings e Marc Randolph como um serviço de locação de DVDs por correio, a Netflix revolucionou o mercado ao implementar um modelo de assinatura mensal sem multas por atraso.</p>
+                    
+                    <h4>A Virada de Chave:</h4>
+                    <p>Em 2007, a empresa lançou oficialmente seu serviço de <i>streaming</i> de vídeo sob demanda. A partir de 2013, com o lançamento de <i>House of Cards</i>, passou a produzir conteúdo original, tornando-se a pioneira absoluta e líder global do setor.</p>
+                </div>
+                <div class="card-footer">
+                    Lançamento do Streaming: 2007
+                </div>
+            </section>
 
-            <div class="footer">
-            Que tipo de história você está mais no clima de assistir hoje (comédia, suspense, romance)?
-            </div>
+            <section class="card">
+                <div class="card-header prime-video">Amazon Prime Video</div>
+                <div class="card-body">
+                    <p>Nascido originalmente em 2006 nos EUA sob o nome <i>Amazon Unbox</i>, o serviço passou por diversas reformulações até ser atrelado ao pacote de benefícios da assinatura global "Amazon Prime".</p>
+                    
+                    <h4>A Virada de Chave:</h4>
+                    <p>A plataforma expandiu-se mundialmente focando em um ecossistema de valor agregado (frete grátis, música e livros). Consolidou sua relevância investindo bilhões de dólares em produções de fantasia e ficção científica de grande escala, além da aquisição do histórico estúdio MGM.</p>
+                </div>
+                <div class="card-footer">
+                    Expansão Global: 2016
+                </div>
+            </section>
 
-        <p class="subtitle">Uma seleção especial dividida por estilos para você escolher o que assistir hoje.</p>
+            <section class="card">
+                <div class="card-header disney-plus">Disney+</div>
+                <div class="card-body">
+                    <p>Diferente das concorrentes que nasceram no ambiente puramente tecnológico, o Disney+ foi lançado em 2019 com a força da maior empresa de mídia e entretenimento tradicional do mundo.</p>
+                    
+                    <h4>A Virada de Chave:</h4>
+                    <p>A plataforma baseou sua estratégia no seu valioso e inigualável catálogo de propriedade intelectual, reunindo em um só lugar as franquias Disney, Pixar, Marvel, Star Wars e National Geographic, atingindo marcas históricas de assinantes em tempo recorde.</p>
+                </div>
+                <div class="card-footer">
+                    Lançamento Oficial: 2019
+                </div>
+            </section>
 
-        <div class="filter-container">
-            <button class="filter-btn active" data-filter="all">Todos</button>
-            <button class="filter-btn" data-filter="sucessos">🎬 Sucessos</button>
-            <button class="filter-btn" data-filter="scifi">🚀 Ficção Científica</button>
-            <button class="filter-btn" data-filter="animacao">🎨 Animações</button>
-        </div>
-
-        <section class="category-section sucessos" data-category="sucessos">
-            <h2 class="category-title">🎬 Grandes Sucessos e Favoritos do Público</h2>
-            <ul class="movie-list">
-                <li class="movie-item">
-                    <div class="movie-title">Parasita (2019)</div>
-                    <div class="movie-desc">Mistura de suspense e comédia ácida que fez história no Oscar. Acompanha uma família criativa que se infiltra na rotina de uma família rica.</div>
-                </li>
-                <li class="movie-item">
-                    <div class="movie-title">Whiplash: Em Busca da Perfeição (2014)</div>
-                    <div class="movie-desc">Um drama intenso sobre um jovem baterista de jazz levado ao limite por seu instrutor implacável.</div>
-                </li>
-                <li class="movie-item">
-                    <div class="movie-title">Tudo em Todo Lugar ao Mesmo Tempo (2022)</div>
-                    <div class="movie-desc">Uma aventura genial e caótica pelo multiverso que foca na relação de uma família.</div>
-                </li>
-            </ul>
-        </section>
-
-        <section class="category-section scifi" data-category="scifi">
-            <h2 class="category-title">🚀 Ficção Científica e Aventura</h2>
-            <ul class="movie-list">
-                <li class="movie-item">
-                    <div class="movie-title">A Chegada (2016)</div>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/v4blEyVi20k?si=9MDCfHlTpf5B_-bz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <div class="movie-desc">Quando naves alienígenas pousam na Terra, uma linguista é chamada para tentar se comunicar com os visitantes. Inteligente e emocionante.</div>
-                </li>
-                <li class="movie-item">
-                    <div class="movie-title">Interstelar (2014)</div>
-                    <div class="movie-desc">Um grupo de astronautas viaja através de um buraco de minhoca para encontrar um novo lar para a humanidade. Visualmente espetacular.</div>
-                </li>
-                <li class="movie-item">
-                    <div class="movie-title">Karatê Kid: Lendas (2025)</div>
-                    <div class="movie-desc">Uma excelente opção recente que reúne astros de diferentes gerações da franquia em uma nova jornada de superação e artes marciais.</div>
-                </li>
-            </ul>
-        </section>
-
-        <section class="category-section animacao" data-category="animacao">
-            <h2 class="category-title">🎨 Animações Fantásticas</h2>
-            <ul class="movie-list">
-                <li class="movie-item">
-                    <div class="movie-title">A Família Mitchell e a Revolta das Máquinas (2021)</div>
-                    <div class="movie-desc">Uma comédia hilária sobre uma família comum que se torna a única esperança da humanidade contra um apocalipse robô.</div>
-                </li>
-                <li class="movie-item">
-                    <div class="movie-title">Viva: A Vida é uma Festa (2017)</div>
-                    <div class="movie-desc">Uma linda celebração da música e da memória familiar baseada nas tradições mexicanas.</div>
-                </li>
-                <li class="movie-item">
-                    <div class="movie-title">Homem-Aranha: No Aranhaverso (2018)</div>
-                    <div class="movie-desc">Visualmente revolucionário, acompanha o jovem Miles Morales aprendendo a ser o herói de seu próprio universo.</div>
-                </li>
-            </ul>
-
-        </section>
-         <h1>Minha Lista de Filmes Recomendados</h1>
-        <section>
-    <ul>
-        <li>Mad Max</li>
-        <li>Circulo de Fogo</li>
-    </ul>
-        </section>
-        video:<iframe width="700" height="450" src="https://www.youtube.com/embed/UtjGTrVwRr4" title="Mad Max: Estrada da Fúria (2015) - A caçada começa (1/10) (pouco editado) [4K]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-        <iframe width="700" height="450" src="https://www.youtube.com/embed/AStCtVQbufI" title="Pacific Rim - Cherno Alpha,Crimson Typhoon, and Striker Eureka vs Otachi, leatherback HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    
+        </main>
     </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
