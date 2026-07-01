@@ -104,16 +104,21 @@
             box-shadow: 0 10px 30px rgba(102, 252, 241, 0.1);
         }
 
-        /* Simulação do Poster do Filme do lado esquerdo */
+        /* Container do Poster Ajustado e Reduzido */
         .filme-poster-shill {
-            width: 140px;
+            width: 110px; /* Reduzido de 140px para um visual mais limpo */
             background: #11141a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
             flex-shrink: 0;
             border-right: 1px solid rgba(255, 255, 255, 0.05);
+            overflow: hidden;
+        }
+
+        /* Faz a imagem funcionar e preencher o card perfeitamente */
+        .filme-poster-shill img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .filme-conteudo {
@@ -182,17 +187,21 @@
             cursor: pointer;
             font-weight: bold;
             transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
         }
 
         .btn-detalhes:hover {
-            background: #0497f8;
-            color: #6c03e6;
+            background: rgba(102, 252, 241, 0.1);
+            color: #66fcf1;
+            box-shadow: 0 0 10px rgba(102, 252, 241, 0.2);
         }
 
         /* Responsividade para o card de filme deitar no mobile */
         @media (max-width: 600px) {
             .filme-card { flex-direction: column; }
-            .filme-poster-shill { width: 100%; height: 100px; border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+            .filme-poster-shill { width: 100%; height: 160px; border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
             .filme-topo { flex-direction: column; gap: 10px; }
         }
     </style>
@@ -229,7 +238,9 @@
             <div class="lista-filmes">
 
                 <article class="filme-card">
-                    <div class="filme-poster-shill">🔍</div>
+                    <div class="filme-poster-shill">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-VAL_Lyc9-0yMq0FW7S4HCatgCXRBtHFnrXlWHqv5mwALNQgGpl5kt2zP&s=10" alt="Pôster de Glass Onion">
+                    </div>
                     <div class="filme-conteudo">
                         <div>
                             <div class="filme-topo">
@@ -245,12 +256,14 @@
                             </div>
                             <p class="filme-sinopse">O detetive Benoit Blanc viaja para a Grécia para desvendar um intrincado quebra-cabeça envolvendo um bilionário excêntrico da tecnologia e seu seleto grupo de amigos de longa data.</p>
                         </div>
-                        <a href="detalhes.html" class="btn-detalhes" style="text-decoration: none; display: inline-block; text-align: center;">Ver Mais Detalhes</a>                    
+                        <a href="detalhes.html" class="btn-detalhes">Ver Mais Detalhes</a>                    
                     </div>
                 </article>
 
                 <article class="filme-card">
-                    <div class="filme-poster-shill">🛡️</div>
+                    <div class="filme-poster-shill">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6Aonqf8fI80gscX9qG9jCq3rD1Z5b8lI0fS43H2Bv9Yf8F_9N&s=10" alt="Pôster de O Pacto">
+                    </div>
                     <div class="filme-conteudo">
                         <div>
                             <div class="filme-topo">
@@ -266,12 +279,14 @@
                             </div>
                             <p class="filme-sinopse">Durante o conflito no Afeganistão, um intérprete local arrisca sua própria vida e cruza desertos perigosos carregando um sargento norte-americano ferido, em uma marcante jornada de honra.</p>
                         </div>
-                        <button class="btn-detalhes">Ver Mais Detalhes</button>
+                        <a href="detalhes-pacto.html" class="btn-detalhes">Ver Mais Detalhes</a>
                     </div>
                 </article>
 
                 <article class="filme-card">
-                    <div class="filme-poster-shill">🎹</div>
+                    <div class="filme-poster-shill">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT77H7S-l7o3kYvF95_A3-6lA6XjW-R4A7A8-A9G0D1z4F8R7E&s=10" alt="Pôster de Soul">
+                    </div>
                     <div class="filme-conteudo">
                         <div>
                             <div class="filme-topo">
@@ -287,7 +302,7 @@
                             </div>
                             <p class="filme-sinopse">Um dedicado pianista de Jazz sofre um acidente no dia mais importante da sua carreira. Sua alma é transportada para um centro cósmico de treinamento onde ele descobre o significado da vida.</p>
                         </div>
-                        <button class="btn-detalhes">Ver Mais Detalhes</button>
+                        <a href="detalhes-soul.html" class="btn-detalhes">Ver Mais Detalhes</a>
                     </div>
                 </article>
 
