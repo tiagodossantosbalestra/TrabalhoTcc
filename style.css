@@ -67,7 +67,7 @@ h1 {
 }
 
 .filter-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(179, 8, 247, 0.1);
 }
 
 .filter-btn.active {
