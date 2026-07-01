@@ -49,7 +49,7 @@
         /* Layout Principal do Detalhe */
         .detalhe-wrapper {
             display: grid;
-            grid-template-columns: 300px 1fr;
+            grid-template-columns: 240px 1fr; /* Diminuído de 300px para 240px */
             gap: 40px;
             background: rgba(31, 40, 51, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -58,16 +58,20 @@
             padding: 40px;
         }
 
-        /* Poster Gigante (Mock) */
+        /* Poster Ajustado */
         .poster-detalhe {
             background: #11141a;
             border-radius: 12px;
-            height: 420px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
+            height: 350px; /* Diminuído de 420px para 350px */
             border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden; /* Garante que a imagem respeite as bordas arredondadas */
+        }
+
+        .poster-detalhe img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+            display: block;
         }
 
         /* Informações */
@@ -157,7 +161,9 @@
                 padding: 25px;
             }
             .poster-detalhe {
-                height: 250px;
+                height: 350px;
+                max-width: 240px;
+                margin: 0 auto; /* Centraliza o pôster em telas menores */
             }
             .info-header h1 {
                 font-size: 2rem;
@@ -174,7 +180,7 @@
 
         <main class="detalhe-wrapper">
             <div class="poster-detalhe">
-                img:https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-VAL_Lyc9-0yMq0FW7S4HCatgCXRBtHFnrXlWHqv5mwALNQgGpl5kt2zP&s=10
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-VAL_Lyc9-0yMq0FW7S4HCatgCXRBtHFnrXlWHqv5mwALNQgGpl5kt2zP&s=10" alt="Pôster de Glass Onion">
             </div>
 
             <div class="info-conteudo">
@@ -201,7 +207,7 @@
                 </div>
 
                 <div class="bloco-texto">
-                    <h3>Ficha Técnica & Detalhes de Produção</h3>
+                    <h3>Ficha Técnica & Detalhes de Production</h3>
                     <div class="ficha-tecnica">
                         <div class="ficha-item">
                             <span>Direção</span>
