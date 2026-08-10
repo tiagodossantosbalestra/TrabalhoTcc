@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Streaming - TCC</title>
+    <title> Portal de Streaming - TCC</title>
     <style>
         * {
             box-sizing: border-box;
@@ -30,7 +31,8 @@
 
         header h1 {
             font-size: 2.5rem;
-            color: #66fcf1; /* Tom neon tecnológico */
+            color: #66fcf1;
+            /* Tom neon tecnológico */
             margin-bottom: 10px;
         }
 
@@ -60,7 +62,7 @@
             background-color: #1f2833;
             border-radius: 4px;
             padding: 25px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             line-height: 1.6;
         }
 
@@ -69,9 +71,26 @@
             margin-bottom: 10px;
         }
 
-        .netflix-txt { color: #E50914; border-bottom: 2px solid #E50914; display: inline-block; padding-bottom: 2px; }
-        .prime-txt { color: #00A8E1; border-bottom: 2px solid #00A8E1; display: inline-block; padding-bottom: 2px; }
-        .disney-txt { color: #113CCF; border-bottom: 2px solid #113CCF; display: inline-block; padding-bottom: 2px; }
+        .netflix-txt {
+            color: #E50914;
+            border-bottom: 2px solid #E50914;
+            display: inline-block;
+            padding-bottom: 2px;
+        }
+
+        .prime-txt {
+            color: #00A8E1;
+            border-bottom: 2px solid #00A8E1;
+            display: inline-block;
+            padding-bottom: 2px;
+        }
+
+        .disney-txt {
+            color: #113CCF;
+            border-bottom: 2px solid #113CCF;
+            display: inline-block;
+            padding-bottom: 2px;
+        }
 
         .card-plataforma p {
             color: #c5c6c7;
@@ -106,7 +125,8 @@
 
         /* Container do Poster Ajustado e Reduzido */
         .filme-poster-shill {
-            width: 110px; /* Reduzido de 140px para um visual mais limpo */
+            width: 110px;
+            /* Reduzido de 140px para um visual mais limpo */
             background: #11141a;
             flex-shrink: 0;
             border-right: 1px solid rgba(255, 255, 255, 0.05);
@@ -172,9 +192,24 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        .b-netflix { background: rgba(229, 9, 20, 0.2); color: #ff4d58; border: 1px solid #E50914; }
-        .b-prime { background: rgba(0, 168, 225, 0.2); color: #33c2f5; border: 1px solid #00A8E1; }
-        .b-disney { background: rgba(17, 60, 207, 0.2); color: #547eff; border: 1px solid #113CCF; }
+
+        .b-netflix {
+            background: rgba(229, 9, 20, 0.2);
+            color: #ff4d58;
+            border: 1px solid #E50914;
+        }
+
+        .b-prime {
+            background: rgba(0, 168, 225, 0.2);
+            color: #33c2f5;
+            border: 1px solid #00A8E1;
+        }
+
+        .b-disney {
+            background: rgba(17, 60, 207, 0.2);
+            color: #547eff;
+            border: 1px solid #113CCF;
+        }
 
         .btn-detalhes {
             align-self: flex-start;
@@ -200,14 +235,26 @@
 
         /* Responsividade para o card de filme deitar no mobile */
         @media (max-width: 600px) {
-            .filme-card { flex-direction: column; }
-            .filme-poster-shill { width: 100%; height: 160px; border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-            .filme-topo { flex-direction: column; gap: 10px; }
+            .filme-card {
+                flex-direction: column;
+            }
+
+            .filme-poster-shill {
+                width: 100%;
+                height: 160px;
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+
+            .filme-topo {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
     </style>
 </head>
-<body>
 
+<body>
     <div class="container">
         <header>
             <h1>Portal de Streaming & Entretenimento</h1>
@@ -217,20 +264,26 @@
         <main>
             <h2 class="secao-titulo">Contexto Histórico</h2>
             <div class="grid-plataformas">
-                
+
                 <section class="card-plataforma">
                     <h3 class="netflix-txt">Netflix</h3>
-                    <p>Fundada em 1997 como locadora de DVDs físicos entregues via correio. Foi pioneira em lançar a tecnologia VoD (Video on Demand) no ano de 2007 e a produzir conteúdo autoral escalável no mundo todo.</p>
+                    <p>Fundada em 1997 como locadora de DVDs físicos entregues via correio. Foi pioneira em lançar a
+                        tecnologia VoD (Video on Demand) no ano de 2007 e a produzir conteúdo autoral escalável no mundo
+                        todo.</p>
                 </section>
 
                 <section class="card-plataforma">
                     <h3 class="prime-txt">Prime Video</h3>
-                    <p>Braço de mídia fundado pela gigante Amazon. Cresceu exponencialmente ao unificar entretenimento e entregas rápidas na assinatura Prime, destacando-se pela compra de estúdios clássicos como a MGM.</p>
+                    <p>Braço de mídia fundado pela gigante Amazon. Cresceu exponencialmente ao unificar entretenimento e
+                        entregas rápidas na assinatura Prime, destacando-se pela compra de estúdios clássicos como a
+                        MGM.</p>
                 </section>
 
                 <section class="card-plataforma">
                     <h3 class="disney-txt">Disney+</h3>
-                    <p>Lançada em 2019, focou estrategicamente em suas propriedades intelectuais exclusivas de grande apelo nostálgico e comercial, incluindo estúdios de animação, heróis e sagas de ficção científica.</p>
+                    <p>Lançada em 2019, focou estrategicamente em suas propriedades intelectuais exclusivas de grande
+                        apelo nostálgico e comercial, incluindo estúdios de animação, heróis e sagas de ficção
+                        científica.</p>
                 </section>
             </div>
 
@@ -239,7 +292,8 @@
 
                 <article class="filme-card">
                     <div class="filme-poster-shill">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-VAL_Lyc9-0yMq0FW7S4HCatgCXRBtHFnrXlWHqv5mwALNQgGpl5kt2zP&s=10" alt="Pôster de Glass Onion">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-VAL_Lyc9-0yMq0FW7S4HCatgCXRBtHFnrXlWHqv5mwALNQgGpl5kt2zP&s=10"
+                            alt="Pôster de Glass Onion">
                     </div>
                     <div class="filme-conteudo">
                         <div>
@@ -254,15 +308,18 @@
                                 <span>•</span>
                                 <span>2h 19m</span>
                             </div>
-                            <p class="filme-sinopse">O detetive Benoit Blanc viaja para a Grécia para desvendar um intrincado quebra-cabeça envolvendo um bilionário excêntrico da tecnologia e seu seleto grupo de amigos de longa data.</p>
+                            <p class="filme-sinopse">O detetive Benoit Blanc viaja para a Grécia para desvendar um
+                                intrincado quebra-cabeça envolvendo um bilionário excêntrico da tecnologia e seu seleto
+                                grupo de amigos de longa data.</p>
                         </div>
-                        <a href="detalhes.html" class="btn-detalhes">Ver Mais Detalhes</a>                    
+                        <a href="detalhes.html" class="btn-detalhes">Ver Mais Detalhes</a>
                     </div>
                 </article>
 
                 <article class="filme-card">
                     <div class="filme-poster-shill">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3BfqaAs3kTitMyG49IHvYQ2ax4Or0gzT-o-ogDqkmf99GKx5ZPfQ20Ka1&s=10" alt="Pôster de O Pacto">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3BfqaAs3kTitMyG49IHvYQ2ax4Or0gzT-o-ogDqkmf99GKx5ZPfQ20Ka1&s=10"
+                            alt="Pôster de O Pacto">
                     </div>
                     <div class="filme-conteudo">
                         <div>
@@ -277,7 +334,9 @@
                                 <span>•</span>
                                 <span>2h 03m</span>
                             </div>
-                            <p class="filme-sinopse">Durante o conflito no Afeganistão, um intérprete local arrisca sua própria vida e cruza desertos perigosos carregando um sargento norte-americano ferido, em uma marcante jornada de honra.</p>
+                            <p class="filme-sinopse">Durante o conflito no Afeganistão, um intérprete local arrisca sua
+                                própria vida e cruza desertos perigosos carregando um sargento norte-americano ferido,
+                                em uma marcante jornada de honra.</p>
                         </div>
                         <a href="detalhes-pacto.html" class="btn-detalhes">Ver Mais Detalhes</a>
                     </div>
@@ -285,7 +344,8 @@
 
                 <article class="filme-card">
                     <div class="filme-poster-shill">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7MGCfwmK_Eh4ShRYvSc4VWWsE00-vec5CnGfGH_cFz_-Zuzn6nDVGzXI&s=10" alt="Pôster de Soul">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7MGCfwmK_Eh4ShRYvSc4VWWsE00-vec5CnGfGH_cFz_-Zuzn6nDVGzXI&s=10"
+                            alt="Pôster de Soul">
                     </div>
                     <div class="filme-conteudo">
                         <div>
@@ -300,7 +360,9 @@
                                 <span>•</span>
                                 <span>1h 40m</span>
                             </div>
-                            <p class="filme-sinopse">Um dedicado pianista de Jazz sofre um acidente no dia mais importante da sua carreira. Sua alma é transportada para um centro cósmico de treinamento onde ele descobre o significado da vida.</p>
+                            <p class="filme-sinopse">Um dedicado pianista de Jazz sofre um acidente no dia mais
+                                importante da sua carreira. Sua alma é transportada para um centro cósmico de
+                                treinamento onde ele descobre o significado da vida.</p>
                         </div>
                         <a href="detalhe-soul.html" class="btn-detalhes">Ver Mais Detalhes</a>
                     </div>
@@ -311,4 +373,5 @@
     </div>
 
 </body>
+
 </html>
