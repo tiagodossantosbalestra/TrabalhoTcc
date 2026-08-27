@@ -49,6 +49,13 @@
             letter-spacing: 1px;
         }
 
+        /* Destaque para a seção de Recomendações do Usuário */
+        .secao-minhas-recomendacoes {
+            color: #66fcf1;
+            border-left: 4px solid #66fcf1;
+            padding-left: 12px;
+        }
+
         /* ------------------------------------------------------------- */
         /* ESTILO 1: PLATAFORMAS (Estilo Cards Clássicos de Informação) */
         /* ------------------------------------------------------------- */
@@ -123,10 +130,15 @@
             box-shadow: 0 10px 30px rgba(102, 252, 241, 0.1);
         }
 
+        /* Card especial destacado para recomendações pessoais */
+        .filme-card.recomendado {
+            border: 1px solid rgba(102, 252, 241, 0.3);
+            background: rgba(31, 40, 51, 0.7);
+        }
+
         /* Container do Poster Ajustado e Reduzido */
         .filme-poster-shill {
             width: 110px;
-            /* Reduzido de 140px para um visual mais limpo */
             background: #11141a;
             flex-shrink: 0;
             border-right: 1px solid rgba(255, 255, 255, 0.05);
@@ -285,6 +297,60 @@
                         apelo nostálgico e comercial, incluindo estúdios de animação, heróis e sagas de ficção
                         científica.</p>
                 </section>
+            </div>
+
+            <!-- NOVA SEÇÃO: MINHAS RECOMENDAÇÕES -->
+            <h2 class="secao-titulo secao-minhas-recomendacoes">Minhas Recomendações</h2>
+            <div class="lista-filmes">
+
+                <!-- Exemplo de Filme Recomendado por Você 1 -->
+                <article class="filme-card recomendado">
+                    <div class="filme-poster-shill">
+                        <img src="https://via.placeholder.com/110x160" alt="Pôster do Filme Recomendado">
+                    </div>
+                    <div class="filme-conteudo">
+                        <div>
+                            <div class="filme-topo">
+                                <h3 class="filme-titulo">Título do Seu Filme Recomendado 1</h3>
+                                <span class="stream-badge b-netflix">Netflix</span>
+                            </div>
+                            <div class="filme-meta">
+                                <span class="nota-tag">★ 9.0</span>
+                                <span>•</span>
+                                <span>Gênero Aqui</span>
+                                <span>•</span>
+                                <span>Duração</span>
+                            </div>
+                            <p class="filme-sinopse">Escreva aqui por que você recomenda este filme ou adicione a sinopse dele.</p>
+                        </div>
+                        <a href="#" class="btn-detalhes">Ver Mais Detalhes</a>
+                    </div>
+                </article>
+
+                <!-- Exemplo de Filme Recomendado por Você 2 -->
+                <article class="filme-card recomendado">
+                    <div class="filme-poster-shill">
+                        <img src="https://via.placeholder.com/110x160" alt="Pôster do Filme Recomendado">
+                    </div>
+                    <div class="filme-conteudo">
+                        <div>
+                            <div class="filme-topo">
+                                <h3 class="filme-titulo">Título do Seu Filme Recomendado 2</h3>
+                                <span class="stream-badge b-prime">Prime Video</span>
+                            </div>
+                            <div class="filme-meta">
+                                <span class="nota-tag">★ 8.8</span>
+                                <span>•</span>
+                                <span>Gênero Aqui</span>
+                                <span>•</span>
+                                <span>Duração</span>
+                            </div>
+                            <p class="filme-sinopse">Escreva aqui por que você recomenda este filme ou adicione a sinopse dele.</p>
+                        </div>
+                        <a href="#" class="btn-detalhes">Ver Mais Detalhes</a>
+                    </div>
+                </article>
+
             </div>
 
             <h2 class="secao-titulo">Sugestões do Sistema</h2>
