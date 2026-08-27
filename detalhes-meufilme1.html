@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes - Título do Seu Filme Recomendado 1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0c10;
+            color: #ffffff;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .btn-voltar {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #66fcf1;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: opacity 0.2s;
+        }
+
+        .btn-voltar:hover {
+            opacity: 0.8;
+        }
+
+        .detalhes-container {
+            background: rgba(31, 40, 51, 0.6);
+            border: 1px solid rgba(102, 252, 241, 0.3);
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            gap: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .poster-detalhes {
+            width: 220px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #11141a;
+        }
+
+        .poster-detalhes img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .info-detalhes {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .titulo-filme {
+            font-size: 2rem;
+            color: #ffffff;
+        }
+
+        .meta-detalhes {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #95a5a6;
+        }
+
+        .nota-tag {
+            color: #f1c40f;
+            font-weight: bold;
+        }
+
+        .stream-badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .b-netflix {
+            background: rgba(229, 9, 20, 0.2);
+            color: #ff4d58;
+            border: 1px solid #E50914;
+        }
+
+        .sinopse-titulo {
+            font-size: 1.2rem;
+            color: #66fcf1;
+            margin-top: 10px;
+        }
+
+        .sinopse-texto {
+            line-height: 1.6;
+            color: #c5c6c7;
+        }
+
+        @media (max-width: 600px) {
+            .detalhes-container {
+                flex-direction: column;
+            }
+
+            .poster-detalhes {
+                width: 100%;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="index.html" class="btn-voltar">← Voltar para o Portal</a>
+
+        <div class="detalhes-container">
+            <div class="poster-detalhes">
+                <img src="https://via.placeholder.com/220x330" alt="Pôster do Filme">
+            </div>
+
+            <div class="info-detalhes">
+                <h1 class="titulo-filme">Título do Seu Filme Recomendado 1</h1>
+                
+                <div class="meta-detalhes">
+                    <span class="nota-tag">★ 9.0</span>
+                    <span>•</span>
+                    <span>Gênero Aqui</span>
+                    <span>•</span>
+                    <span>Duração</span>
+                    <span class="stream-badge b-netflix">Netflix</span>
+                </div>
+
+                <h2 class="sinopse-titulo">Sinopse Completa</h2>
+                <p class="sinopse-texto">
+                    Escreva aqui a sinopse detalhada do primeiro filme recomendado. Explique o enredo principal, a proposta da história e por que você considera esta uma excelente indicação para a sua lista do TCC.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
