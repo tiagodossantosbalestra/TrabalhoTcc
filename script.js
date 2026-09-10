@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Altera a classe ativa entre os botões
+            
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
             sections.forEach(section => {
                 const category = section.getAttribute('data-category');
                 
-                // Filtra as secções com base na escolha
                 if (filterValue === 'all' || filterValue === category) {
                     section.style.display = 'block';
                 } else {
