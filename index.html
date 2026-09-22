@@ -1,293 +1,66 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="pagina-inicial">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Portal de Streaming - TCC</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #525a7a;
-            color: #ffffff;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            color: #66fcf1;
-            /* Tom neon tecnológico */
-            margin-bottom: 10px;
-        }
-
-        header p {
-            color: #c5c6c7;
-            font-size: 1.1rem;
-        }
-
-        h2.secao-titulo {
-            font-size: 1.8rem;
-            margin: 50px 0 25px 0;
-            color: #ffffff;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .secao-minhas-recomendacoes {
-            color: #66fcf1;
-            border-left: 4px solid #66fcf1;
-            padding-left: 12px;
-        }
-
-        .grid-plataformas {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .card-plataforma {
-            background-color: #1f2833;
-            border-radius: 4px;
-            padding: 25px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            line-height: 1.6;
-        }
-
-        .card-plataforma h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-        }
-
-        .netflix-txt {
-            color: #E50914;
-            border-bottom: 2px solid #E50914;
-            display: inline-block;
-            padding-bottom: 2px;
-        }
-
-        .prime-txt {
-            color: #00A8E1;
-            border-bottom: 2px solid #00A8E1;
-            display: inline-block;
-            padding-bottom: 2px;
-        }
-
-        .disney-txt {
-            color: #113CCF;
-            border-bottom: 2px solid #113CCF;
-            display: inline-block;
-            padding-bottom: 2px;
-        }
-
-        .card-plataforma p {
-            color: #c5c6c7;
-            margin-top: 10px;
-            font-size: 0.95rem;
-        }
-
-        .lista-filmes {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .filme-card {
-            display: flex;
-            background: rgba(31, 40, 51, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(10px);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .filme-card:hover {
-            transform: scale(1.01);
-            border-color: #66fcf1;
-            box-shadow: 0 10px 30px rgba(102, 252, 241, 0.1);
-        }
-
-        .filme-card.recomendado {
-            border: 1px solid rgba(102, 252, 241, 0.3);
-            background: rgba(31, 40, 51, 0.7);
-        }
-
-        .filme-poster-shill {
-            width: 110px;
-            background: #11141a;
-            flex-shrink: 0;
-            border-right: 1px solid rgba(255, 255, 255, 0.05);
-            overflow: hidden;
-        }
-
-        .filme-poster-shill img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .filme-conteudo {
-            padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .filme-topo {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 10px;
-        }
-
-        .filme-titulo {
-            font-size: 1.4rem;
-            color: #fff;
-            font-weight: 600;
-        }
-
-        .filme-meta {
-            display: flex;
-            gap: 15px;
-            font-size: 0.85rem;
-            color: #95a5a6;
-            margin-bottom: 12px;
-            align-items: center;
-        }
-
-        .nota-tag {
-            color: #f1c40f;
-            font-weight: bold;
-        }
-
-        .filme-sinopse {
-            color: #bdc3c7;
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-
-        .stream-badge {
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .b-netflix {
-            background: rgba(229, 9, 20, 0.2);
-            color: #ff4d58;
-            border: 1px solid #E50914;
-        }
-
-        .b-prime {
-            background: rgba(0, 168, 225, 0.2);
-            color: #33c2f5;
-            border: 1px solid #00A8E1;
-        }
-
-        .b-disney {
-            background: rgba(17, 60, 207, 0.2);
-            color: #547eff;
-            border: 1px solid #113CCF;
-        }
-
-        .btn-detalhes {
-            align-self: flex-start;
-            background: transparent;
-            border: 1px solid #66fcf1;
-            color: #66fcf1;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.2s ease;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .btn-detalhes:hover {
-            background: rgba(102, 252, 241, 0.1);
-            color: #66fcf1;
-            box-shadow: 0 0 10px rgba(102, 252, 241, 0.2);
-        }
-
-        @media (max-width: 600px) {
-            .filme-card {
-                flex-direction: column;
-            }
-
-            .filme-poster-shill {
-                width: 100%;
-                height: 160px;
-                border-right: none;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            }
-
-            .filme-topo {
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
-    </style>
+    <title> Portal de Streaming </title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
+        <nav class="site-header" aria-label="Navegação principal">
+            <a class="site-brand" href="index.html">
+                <span class="site-brand-icon" aria-hidden="true">▣</span>
+                <span>Portal do Streaming</span>
+            </a>
+            <div class="site-nav-links">
+                <a href="index.html">Início</a>
+                <a href="#filmes">Filmes</a>
+                <a href="#contexto">Contexto</a>
+            </div>
+        </nav>
+
         <header>
             <h1>Portal de Streaming & Entretenimento</h1>
             <p>Conheça o contexto histórico e navegue pelas indicações exclusivas.</p>
+            <a class="hero-cta" href="#filmes">Explorar recomendações</a>
         </header>
 
         <main>
-            <h2 class="secao-titulo">Contexto Histórico</h2>
+            <h2 id="contexto" class="secao-titulo">Contexto Histórico</h2>
             <div class="grid-plataformas">
 
                 <section class="card-plataforma">
-                    <h3 class="netflix-txt">Netflix</h3>
+                    <h3 class="netflix-txt"><span class="platform-logo logo-netflix">N</span>Netflix</h3>
                     <p>Fundada em 1997 como locadora de DVDs físicos entregues via correio. Foi pioneira em lançar a
                         tecnologia VoD (Video on Demand) no ano de 2007 e a produzir conteúdo autoral escalável no mundo
                         todo.</p>
                 </section>
 
                 <section class="card-plataforma">
-                    <h3 class="prime-txt">Prime Video</h3>
+                    <h3 class="prime-txt"><span class="platform-logo logo-prime">▶</span>Prime Video</h3>
                     <p>Braço de mídia fundado pela gigante Amazon. Cresceu exponencialmente ao unificar entretenimento e
                         entregas rápidas na assinatura Prime, destacando-se pela compra de estúdios clássicos como a
                         MGM.</p>
                 </section>
 
                 <section class="card-plataforma">
-                    <h3 class="disney-txt">Disney+</h3>
+                    <h3 class="disney-txt"><span class="platform-logo logo-disney">D+</span>Disney+</h3>
                     <p>Lançada em 2019, focou estrategicamente em suas propriedades intelectuais exclusivas de grande
                         apelo nostálgico e comercial, incluindo estúdios de animação, heróis e sagas de ficção
                         científica.</p>
                 </section>
+
+                <section class="card-plataforma">
+                    <h3 class="max-txt"><span class="platform-logo logo-max">M</span>Max</h3>
+                    <p>Serviço de streaming da Warner Bros. Discovery, reunindo filmes, séries e produções de marcas
+                        como HBO, Warner Bros., DC e Cartoon Network em um só catálogo.</p>
+                </section>
             </div>
 
-            <h2 class="secao-titulo secao-minhas-recomendacoes">Minhas Recomendações</h2>
+            <h2 id="filmes" class="secao-titulo secao-minhas-recomendacoes">Minhas Recomendações</h2>
             <div class="lista-filmes">
 
                 <article class="filme-card recomendado">
@@ -309,13 +82,13 @@
                             </div>
                             <p class="filme-sinopse">Escreva aqui por que você recomenda este filme ou adicione a sinopse dele.</p>
                         </div>
-                        <a href="detalhes-meufilme1.html" class="btn-detalhes">Ver Mais Detalhes</a>        
+                        <button class="btn-detalhes" data-filme="pokemon">Ver Mais Detalhes</button>
                         </div>
                 </article>
 
                 <article class="filme-card recomendado">
                     <div class="filme-poster-shill">
-                        <img src="https://www.cinebelasartes.com.br/wp-content/uploads/2022/11/Mad-Max-Estrada-da-Furi-600x855-min.jpeg" alt="Pôster do Filme Recomendado">
+                        <img src="imagem/madmax.jpeg" alt="Pôster do Filme Recomendado">
                     </div>
                     <div class="filme-conteudo">
                         <div>
@@ -332,19 +105,13 @@
                             </div>
                             <p class="filme-sinopse">Escreva aqui por que você recomenda este filme ou adicione a sinopse dele.</p>
                         </div>
-                        <a href="detalhes-meufilme2.html" class="btn-detalhes">Ver Mais Detalhes</a>
+                        <button class="btn-detalhes" data-filme="madmax">Ver Mais Detalhes</button>
                     </div>
                 </article>
 
-            </div>
-
-            <h2 class="secao-titulo">Sugestões do Sistema</h2>
-            <div class="lista-filmes">
-
                 <article class="filme-card">
                     <div class="filme-poster-shill">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-VAL_Lyc9-0yMq0FW7S4HCatgCXRBtHFnrXlWHqv5mwALNQgGpl5kt2zP&s=10"
-                            alt="Pôster de Glass Onion">
+                        <img src="imagem/glassonion.jpeg" alt="Pôster de Glass Onion">
                     </div>
                     <div class="filme-conteudo">
                         <div>
@@ -363,13 +130,13 @@
                                 intrincado quebra-cabeça envolvendo um bilionário excêntrico da tecnologia e seu seleto
                                 grupo de amigos de longa data.</p>
                         </div>
-                        <a href="detalhes.html" class="btn-detalhes">Ver Mais Detalhes</a>
+                        <button class="btn-detalhes" data-filme="glass-onion">Ver Mais Detalhes</button>
                     </div>
                 </article>
 
                 <article class="filme-card">
                     <div class="filme-poster-shill">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3BfqaAs3kTitMyG49IHvYQ2ax4Or0gzT-o-ogDqkmf99GKx5ZPfQ20Ka1&s=10"
+                        <img src="imagem/pacto.jpeg"
                             alt="Pôster de O Pacto">
                     </div>
                     <div class="filme-conteudo">
@@ -389,13 +156,13 @@
                                 própria vida e cruza desertos perigosos carregando um sargento norte-americano ferido,
                                 em uma marcante jornada de honra.</p>
                         </div>
-                        <a href="detalhes-pacto.html" class="btn-detalhes">Ver Mais Detalhes</a>
+                        <button class="btn-detalhes" data-filme="pacto">Ver Mais Detalhes</button>
                     </div>
                 </article>
 
                 <article class="filme-card">
                     <div class="filme-poster-shill">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7MGCfwmK_Eh4ShRYvSc4VWWsE00-vec5CnGfGH_cFz_-Zuzn6nDVGzXI&s=10"
+                        <img src="imagem/soul.jpeg"
                             alt="Pôster de Soul">
                     </div>
                     <div class="filme-conteudo">
@@ -415,13 +182,176 @@
                                 importante da sua carreira. Sua alma é transportada para um centro cósmico de
                                 treinamento onde ele descobre o significado da vida.</p>
                         </div>
-                        <a href="detalhe-soul.html" class="btn-detalhes">Ver Mais Detalhes</a>
+                        <button class="btn-detalhes" data-filme="soul">Ver Mais Detalhes</button>
                     </div>
                 </article>
 
+                <!-- 5 novos filmes  -->
+                 <!--  filme 1 -->
+                  <article class="filme-card">
+                    <div class="filme-poster-shill">
+                        <img src="imagem/xxxxxxxx.jpeg" alt="Pôster do filme a definir">
+                            alt="Pôster de xxxxxxxx ">
+                    </div>
+                    <div class="filme-conteudo">
+                        <div>
+                            <div class="filme-topo">
+                                <h3 class="filme-titulo"> xxxxxxxxxxxxxxxxxx </h3>
+                                <span class="stream-badge b-disney"> qual plataforma??? </span>
+                            </div>
+                            <div class="filme-meta">
+                                <span class="nota-tag">★ 8.1 xxxxxx  ver que nota é </span>
+                                <span>•</span>
+                                <span> Animação / Família </span>
+                                <span>•</span>
+                                <span>1h 40m</span>
+                            </div>
+                            <p class="filme-sinopse"> copiar a sinopse </p>
+                        </div>
+                        <button class="btn-detalhes" data-filme="placeholder">Ver Mais Detalhes</button>
+                    </div>
+                </article>
+
+                <!--  filme 2  -->
+                  <article class="filme-card">
+                    <div class="filme-poster-shill">
+                        <img src="imagem/xxxxxxxx.jpeg" alt="Pôster do filme a definir">
+                            alt="Pôster de xxxxxxxx ">
+                    </div>
+                    <div class="filme-conteudo">
+                        <div>
+                            <div class="filme-topo">
+                                <h3 class="filme-titulo"> xxxxxxxxxxxxxxxxxx </h3>
+                                <span class="stream-badge b-disney"> qual plataforma??? </span>
+                            </div>
+                            <div class="filme-meta">
+                                <span class="nota-tag">★ 8.1 xxxxxx  ver que nota é </span>
+                                <span>•</span>
+                                <span> Animação / Família </span>
+                                <span>•</span>
+                                <span>1h 40m</span>
+                            </div>
+                            <p class="filme-sinopse"> copiar a sinopse </p>
+                        </div>
+                        <button class="btn-detalhes" data-filme="placeholder">Ver Mais Detalhes</button>
+                    </div>
+                </article>
+
+            <!--  filme 3  -->
+            <article class="filme-card">
+                    <div class="filme-poster-shill">
+                        <img src="imagem/xxxxxxxx.jpeg" alt="Pôster do filme a definir">
+                            alt="Pôster de xxxxxxxx ">
+                    </div>
+                    <div class="filme-conteudo">
+                        <div>
+                            <div class="filme-topo">
+                                <h3 class="filme-titulo"> xxxxxxxxxxxxxxxxxx </h3>
+                                <span class="stream-badge b-disney"> qual plataforma??? </span>
+                            </div>
+                            <div class="filme-meta">
+                                <span class="nota-tag">★ 8.1 xxxxxx  ver que nota é </span>
+                                <span>•</span>
+                                <span> Animação / Família </span>
+                                <span>•</span>
+                                <span>1h 40m</span>
+                            </div>
+                            <p class="filme-sinopse"> copiar a sinopse </p>
+                        </div>
+                        <button class="btn-detalhes" data-filme="placeholder">Ver Mais Detalhes</button>
+                    </div>
+                </article>
+
+                 <!--  filme 4  -->
+ <article class="filme-card">
+                    <div class="filme-poster-shill">
+                        <img src="imagem/xxxxxxxx.jpeg" alt="Pôster do filme a definir">
+                            alt="Pôster de xxxxxxxx ">
+                    </div>
+                    <div class="filme-conteudo">
+                        <div>
+                            <div class="filme-topo">
+                                <h3 class="filme-titulo"> xxxxxxxxxxxxxxxxxx </h3>
+                                <span class="stream-badge b-disney"> qual plataforma??? </span>
+                            </div>
+                            <div class="filme-meta">
+                                <span class="nota-tag">★ 8.1 xxxxxx  ver que nota é </span>
+                                <span>•</span>
+                                <span> Animação / Família </span>
+                                <span>•</span>
+                                <span>1h 40m</span>
+                            </div>
+                            <p class="filme-sinopse"> copiar a sinopse </p>
+                        </div>
+                        <button class="btn-detalhes" data-filme="placeholder">Ver Mais Detalhes</button>
+                    </div>
+                </article>
+
+                 <!--  filme 3  -->
+ <article class="filme-card">
+                    <div class="filme-poster-shill">
+                        <img src="imagem/xxxxxxxx.jpeg" alt="Pôster do filme a definir">
+                            alt="Pôster de xxxxxxxx ">
+                    </div>
+                    <div class="filme-conteudo">
+                        <div>
+                            <div class="filme-topo">
+                                <h3 class="filme-titulo"> xxxxxxxxxxxxxxxxxx </h3>
+                                <span class="stream-badge b-disney"> qual plataforma??? </span>
+                            </div>
+                            <div class="filme-meta">
+                                <span class="nota-tag">★ 8.1 xxxxxx  ver que nota é </span>
+                                <span>•</span>
+                                <span> Animação / Família </span>
+                                <span>•</span>
+                                <span>1h 40m</span>
+                            </div>
+                            <p class="filme-sinopse"> copiar a sinopse </p>
+                        </div>
+                        <button class="btn-detalhes" data-filme="placeholder">Ver Mais Detalhes</button>
+                    </div>
+                </article>
+
+
             </div>
         </main>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo"><span class="footer-logo-icon">▣</span> Portal do Streaming</div>
+                    <p>Recomendações de filmes selecionadas para ajudar você a escolher o próximo filme da sua noite.</p>
+                </div>
+
+                <nav class="footer-nav" aria-label="Navegação do rodapé">
+                    <h2>Navegação</h2>
+                    <a href="index.html">Início</a>
+                    <a href="#filmes">Filmes</a>
+                    <a href="#contexto">Contexto</a>
+                </nav>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Portal do Streaming. Todos os direitos reservados.</span>
+                <span class="footer-made">Feito com <span aria-hidden="true">♥</span> para quem ama cinema.</span>
+            </div>
+        </footer>
     </div>
+
+    <div class="detalhes-modal" id="detalhes-modal" aria-hidden="true">
+        <div class="detalhes-modal-backdrop" data-fechar-modal></div>
+        <section class="detalhes-card" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+            <button class="modal-fechar" type="button" data-fechar-modal aria-label="Fechar detalhes">&times;</button>
+            <img class="modal-poster" id="modal-poster" alt="">
+            <h2 id="modal-titulo"></h2>
+            <div class="modal-meta" id="modal-meta"></div>
+            <h3>Sinopse Completa</h3>
+            <p id="modal-sinopse"></p>
+            <div class="modal-ficha" id="modal-ficha"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
 

@@ -1,131 +1,901 @@
-:root {
-    --bg-color: #0f172a;
-    --container-bg: #1e293b;
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-    --accent-sucessos: #f59e0b;
-    --accent-scifi: #3b82f6;
-    --accent-animacao: #ec4899;
-    --border-color: #334155;
-}
+/* Estilos centralizados do portal e das páginas de detalhes. */
+/* As classes no elemento html preservam as diferenças entre páginas. */
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-main);
-    line-height: 1.6;
+.pagina-inicial body {
+    background-color: #525a7a;
+    color: #ffffff;
     padding: 40px 20px;
 }
 
-.container {
-    max-width: 800px;
+.pagina-inicial .container ,
+.pagina-pacto .container ,
+.pagina-soul .container ,
+.pagina-detalhes .container ,
+.pagina-soul-rascunho .container {
+    max-width: 1100px;
     margin: 0 auto;
-    background-color: var(--container-bg);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
 }
 
-h1 {
-    font-size: 2.5rem;
+.pagina-inicial header {
     text-align: center;
-    margin-bottom: 10px;
-    color: #ffffff;
+    margin-bottom: 50px;
 }
 
-.subtitle {
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-}
-
-/* Estilo dos Filtros */
-.filter-container {
+.pagina-inicial .site-header {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+    padding: 8px 0 18px;
+    border-bottom: 1px solid rgba(102, 252, 241, 0.2);
+}
+
+.pagina-inicial .site-brand {
+    display: inline-flex;
+    align-items: center;
     gap: 10px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
+    color: #66fcf1;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
 }
 
-.filter-btn {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border-color);
-    color: var(--text-main);
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.2s ease;
+.pagina-inicial .site-brand-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border: 2px solid #66fcf1;
+    border-radius: 9px;
+    font-size: 1rem;
 }
 
-.filter-btn:hover {
-    background-color: rgba(179, 8, 247, 0.1);
+.pagina-inicial .site-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
 }
 
-.filter-btn.active {
-    background-color: #3b82f6;
-    border-color: #3b82f6;
+.pagina-inicial .site-nav-links a {
+    color: #d7d9dc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
 }
 
-/* Categorias */
-.category-section {
-    margin-bottom: 40px;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+.pagina-inicial .site-nav-links a:hover {
+    color: #66fcf1;
 }
 
-.category-title {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--border-color);
+.pagina-inicial .site-nav-links .site-nav-cta {
+    padding: 8px 14px;
+    border: 1px solid rgba(102, 252, 241, 0.55);
+    border-radius: 7px;
+    color: #d7d9dc;
+    background: rgba(102, 252, 241, 0.1);
+    font-weight: 700;
 }
 
-.sucessos .category-title { color: var(--accent-sucessos); border-image: linear-gradient(to right, var(--accent-sucessos), transparent) 1; }
-.scifi .category-title { color: var(--accent-scifi); border-image: linear-gradient(to right, var(--accent-scifi), transparent) 1; }
-.animacao .category-title { color: var(--accent-animacao); border-image: linear-gradient(to right, var(--accent-animacao), transparent) 1; }
-
-.movie-list {
-    list-style: none;
+.pagina-inicial .site-nav-links .site-nav-cta:hover {
+    color: #66fcf1;
+    background: rgba(102, 252, 241, 0.18);
 }
 
-.movie-item {
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border-color);
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    transition: transform 0.2s, background-color 0.2s;
+.pagina-inicial header h1 {
+    font-size: 2.5rem;
+    color: #66fcf1;
+    margin-bottom: 10px;
 }
 
-.movie-item:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    transform: translateY(-2px);
+.pagina-inicial header p {
+    color: #d7d9dc;
+    font-size: 1.1rem;
 }
 
-.movie-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 5px;
+.pagina-inicial .hero-cta {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 10px 18px;
+    border: 1px solid rgba(102, 252, 241, 0.55);
+    border-radius: 7px;
+    color: #d7d9dc;
+    background: rgba(102, 252, 241, 0.1);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.pagina-inicial .hero-cta:hover {
+    color: #66fcf1;
+    background: rgba(102, 252, 241, 0.18);
+}
+
+.pagina-inicial h2.secao-titulo {
+    font-size: 1.8rem;
+    margin: 50px 0 25px 0;
     color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.movie-desc {
-    color: var(--text-muted);
+.pagina-inicial .secao-minhas-recomendacoes {
+    color: #66fcf1;
+    border-left: 4px solid #66fcf1;
+    padding-left: 12px;
+}
+
+.pagina-inicial .grid-plataformas {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+}
+
+@media (max-width: 1000px) {
+    .pagina-inicial .grid-plataformas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.pagina-inicial .card-plataforma {
+    background-color: #1f2833;
+    border-radius: 4px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;
+}
+
+.pagina-inicial .card-plataforma h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.pagina-inicial .platform-logo {
+    display: inline-grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    border-radius: 7px;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 800;
+    vertical-align: 2px;
+}
+
+.pagina-inicial .logo-netflix {
+    background: #e50914;
+}
+
+.pagina-inicial .logo-prime {
+    background: #00a8e1;
+    font-size: 0.75rem;
+}
+
+.pagina-inicial .logo-disney {
+    background: #113ccf;
+    font-size: 0.68rem;
+}
+
+.pagina-inicial .logo-max {
+    background: #6d4aff;
+}
+
+.pagina-inicial .netflix-txt {
+    color: #E50914;
+    border-bottom: 2px solid #E50914;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.pagina-inicial .prime-txt {
+    color: #00A8E1;
+    border-bottom: 2px solid #00A8E1;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.pagina-inicial .disney-txt {
+    color: #113CCF;
+    border-bottom: 2px solid #113CCF;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.pagina-inicial .max-txt {
+    color: #c4b5fd;
+    border-bottom: 2px solid #c4b5fd;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.pagina-inicial .card-plataforma p {
+    color: #d7d9dc;
+    margin-top: 10px;
     font-size: 0.95rem;
 }
 
-.footer {
+.pagina-inicial .lista-filmes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pagina-inicial .filme-card {
+    display: flex;
+    background: rgba(31, 40, 51, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.pagina-inicial .filme-card:hover {
+    transform: scale(1.01);
+    border-color: #66fcf1;
+    box-shadow: 0 10px 30px rgba(102, 252, 241, 0.1);
+}
+
+.pagina-inicial .filme-card.recomendado {
+    border: 1px solid rgba(102, 252, 241, 0.3);
+    background: rgba(31, 40, 51, 0.7);
+}
+
+.pagina-inicial .filme-poster-shill {
+    width: 110px;
+    background: #11141a;
+    flex-shrink: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+.pagina-inicial .filme-poster-shill img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.pagina-inicial .filme-conteudo {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pagina-inicial .filme-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.pagina-inicial .filme-titulo {
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.pagina-inicial .filme-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 0.85rem;
+    color: #d0d8dd;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.pagina-inicial .nota-tag ,
+.pagina-meufilme1 .nota-tag ,
+.pagina-meufilme2 .nota-tag {
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+.pagina-inicial .filme-sinopse {
+    color: #d5d9dd;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.pagina-inicial .stream-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pagina-inicial .b-netflix ,
+.pagina-meufilme1 .b-netflix {
+    background: rgba(229, 9, 20, 0.2);
+    color: #ff4d58;
+    border: 1px solid #E50914;
+}
+
+.pagina-inicial .b-prime ,
+.pagina-meufilme2 .b-prime {
+    background: rgba(0, 168, 225, 0.2);
+    color: #33c2f5;
+    border: 1px solid #00A8E1;
+}
+
+.pagina-inicial .b-disney {
+    background: rgba(17, 60, 207, 0.2);
+    color: #82a0ff;
+    border: 1px solid #113CCF;
+}
+
+.pagina-inicial .btn-detalhes {
+    align-self: flex-start;
+    background: transparent;
+    border: 1px solid #66fcf1;
+    color: #66fcf1;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
     text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border-color);
-    color: var(--text-muted);
+}
+
+.pagina-inicial .detalhes-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.pagina-inicial .detalhes-modal.aberto { display: flex; }
+.pagina-inicial .detalhes-modal-backdrop { position: absolute; inset: 0; background: rgba(8, 12, 22, 0.78); }
+.pagina-inicial .detalhes-card { position: relative; display: grid; grid-template-columns: 170px minmax(0, 1fr); column-gap: 28px; align-items: start; width: min(760px, 100%); max-height: 90vh; overflow: auto; padding: 34px; border: 1px solid rgba(102, 252, 241, 0.45); border-radius: 14px; background: #1f2833; color: #d7d9dc; box-shadow: 0 18px 50px rgba(0,0,0,.45); }
+.pagina-inicial .modal-poster { display: block; grid-column: 1; grid-row: 1 / span 5; width: 170px; height: 240px; border-radius: 8px; object-fit: cover; }
+.pagina-inicial .detalhes-card h2 { margin-bottom: 14px; color: #fff; font-size: 1.8rem; }
+.pagina-inicial .detalhes-card h3 { margin: 24px 0 8px; color: #66fcf1; }
+.pagina-inicial .detalhes-card p { line-height: 1.7; }
+.pagina-inicial .modal-meta { color: #f1c40f; font-weight: 700; }
+.pagina-inicial .modal-meta.plataforma-netflix { color: #ff5b63; }
+.pagina-inicial .modal-meta.plataforma-prime { color: #42c9f4; }
+.pagina-inicial .modal-meta.plataforma-disney { color: #82a0ff; }
+.pagina-inicial .modal-meta.plataforma-max { color: #c4b5fd; }
+.pagina-inicial .modal-ficha { margin-top: 22px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.12); color: #d0d8dd; }
+.pagina-inicial .modal-ficha.plataforma-netflix { color: #ff5b63; }
+.pagina-inicial .modal-ficha.plataforma-prime { color: #42c9f4; }
+.pagina-inicial .modal-ficha.plataforma-disney { color: #82a0ff; }
+.pagina-inicial .modal-ficha.plataforma-max { color: #c4b5fd; }
+.pagina-inicial .modal-fechar { position: absolute; top: 10px; right: 14px; border: 0; background: transparent; color: #d7d9dc; font-size: 2rem; cursor: pointer; }
+
+@media (max-width: 600px) {
+    .pagina-inicial .detalhes-card { display: block; }
+    .pagina-inicial .modal-poster { width: 150px; height: 210px; margin-bottom: 20px; }
+}
+
+.pagina-inicial .btn-detalhes:hover {
+    background: rgba(102, 252, 241, 0.1);
+    color: #66fcf1;
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.2);
+}
+
+@media (max-width: 600px) {
+    .pagina-inicial .grid-plataformas {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-inicial .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 36px;
+    }
+
+    .pagina-inicial .site-nav-links {
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .pagina-inicial .filme-card {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .pagina-inicial .filme-poster-shill {
+        width: 100%;
+        height: 160px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+}
+
+@media (max-width: 600px) {
+    .pagina-inicial .filme-topo {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.pagina-meufilme1 body ,
+.pagina-pacto body ,
+.pagina-meufilme2 body ,
+.pagina-soul body ,
+.pagina-detalhes body ,
+.pagina-soul-rascunho body {
+    background-color: #0b0c10;
+    color: #ffffff;
+    padding: 40px 20px;
+}
+
+.pagina-meufilme1 .container ,
+.pagina-meufilme2 .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.pagina-meufilme1 .btn-voltar ,
+.pagina-meufilme2 .btn-voltar {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #66fcf1;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.pagina-meufilme1 .btn-voltar:hover ,
+.pagina-meufilme2 .btn-voltar:hover {
+    opacity: 0.8;
+}
+
+.pagina-meufilme1 .detalhes-container {
+    background: rgba(9, 73, 151, 0.6);
+    border: 1px solid rgba(102, 252, 241, 0.3);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.pagina-meufilme1 .poster-detalhes ,
+.pagina-meufilme2 .poster-detalhes {
+    width: 220px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #11141a;
+}
+
+.pagina-meufilme1 .poster-detalhes img ,
+.pagina-meufilme2 .poster-detalhes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.pagina-meufilme1 .info-detalhes ,
+.pagina-meufilme2 .info-detalhes {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pagina-meufilme1 .titulo-filme ,
+.pagina-meufilme2 .titulo-filme {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.pagina-meufilme1 .meta-detalhes ,
+.pagina-meufilme2 .meta-detalhes {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #d0d8dd;
+}
+
+.pagina-meufilme1 .stream-badge ,
+.pagina-meufilme2 .stream-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.pagina-meufilme1 .sinopse-titulo ,
+.pagina-meufilme2 .sinopse-titulo {
+    font-size: 1.2rem;
+    color: #66fcf1;
+    margin-top: 10px;
+}
+
+.pagina-meufilme1 .sinopse-texto ,
+.pagina-meufilme2 .sinopse-texto {
+    line-height: 1.6;
+    color: #d7d9dc;
+}
+
+@media (max-width: 600px) {
+    .pagina-meufilme1 .detalhes-container ,
+.pagina-meufilme2 .detalhes-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .pagina-meufilme1 .poster-detalhes ,
+.pagina-meufilme2 .poster-detalhes {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+.pagina-pacto .btn-voltar ,
+.pagina-soul .btn-voltar ,
+.pagina-detalhes .btn-voltar ,
+.pagina-soul-rascunho .btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #d7d9dc;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    margin-bottom: 30px;
+}
+
+.pagina-pacto .btn-voltar:hover ,
+.pagina-soul .btn-voltar:hover ,
+.pagina-detalhes .btn-voltar:hover ,
+.pagina-soul-rascunho .btn-voltar:hover {
+    border-color: #66fcf1;
+    color: #66fcf1;
+    transform: translateX(-3px);
+}
+
+.pagina-pacto .detalhe-wrapper ,
+.pagina-soul .detalhe-wrapper ,
+.pagina-detalhes .detalhe-wrapper {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 40px;
+    background: rgba(31, 40, 51, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 40px;
+}
+
+.pagina-pacto .poster-detalhe ,
+.pagina-soul .poster-detalhe ,
+.pagina-detalhes .poster-detalhe {
+    background: #11141a;
+    border-radius: 12px;
+    height: 350px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.pagina-pacto .poster-detalhe img ,
+.pagina-soul .poster-detalhe img ,
+.pagina-detalhes .poster-detalhe img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.pagina-pacto .info-header h1 ,
+.pagina-soul .info-header h1 ,
+.pagina-detalhes .info-header h1 ,
+.pagina-soul-rascunho .info-header h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.pagina-pacto .meta-detalhe ,
+.pagina-soul .meta-detalhe ,
+.pagina-detalhes .meta-detalhe ,
+.pagina-soul-rascunho .meta-detalhe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 0.95rem;
+    color: #d0d8dd;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.pagina-pacto .nota-grande ,
+.pagina-soul .nota-grande ,
+.pagina-detalhes .nota-grande ,
+.pagina-soul-rascunho .nota-grande {
+    color: #f1c40f;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.pagina-pacto .stream-badge-fixo {
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid #00A8E1;
+    background: rgba(0, 168, 225, 0.2);
+    color: #33c2f5;
+}
+
+.pagina-pacto .divider ,
+.pagina-soul .divider ,
+.pagina-detalhes .divider ,
+.pagina-soul-rascunho .divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 25px 0;
+}
+
+.pagina-pacto .bloco-texto h3 ,
+.pagina-soul .bloco-texto h3 ,
+.pagina-detalhes .bloco-texto h3 ,
+.pagina-soul-rascunho .bloco-texto h3 {
+    color: #66fcf1;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pagina-pacto .bloco-texto p ,
+.pagina-soul .bloco-texto p ,
+.pagina-detalhes .bloco-texto p ,
+.pagina-soul-rascunho .bloco-texto p {
+    color: #d7d9dc;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.pagina-pacto .ficha-tecnica ,
+.pagina-soul .ficha-tecnica ,
+.pagina-detalhes .ficha-tecnica ,
+.pagina-soul-rascunho .ficha-tecnica {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    background: rgba(11, 12, 16, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.pagina-pacto .ficha-item span ,
+.pagina-soul .ficha-item span ,
+.pagina-detalhes .ficha-item span ,
+.pagina-soul-rascunho .ficha-item span {
+    display: block;
+    font-size: 0.85rem;
+    color: #d0d8dd;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.pagina-pacto .ficha-item p ,
+.pagina-soul .ficha-item p ,
+.pagina-detalhes .ficha-item p ,
+.pagina-soul-rascunho .ficha-item p {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+@media (max-width: 800px) {
+    .pagina-pacto .detalhe-wrapper ,
+.pagina-soul .detalhe-wrapper ,
+.pagina-detalhes .detalhe-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 800px) {
+    .pagina-pacto .poster-detalhe ,
+.pagina-soul .poster-detalhe ,
+.pagina-detalhes .poster-detalhe {
+        height: 350px;
+        max-width: 240px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .pagina-pacto .info-header h1 ,
+.pagina-soul .info-header h1 ,
+.pagina-detalhes .info-header h1 {
+        font-size: 2rem;
+    }
+}
+
+.pagina-meufilme2 .detalhes-container {
+    background: #166683;
+    border: 1px solid rgba(102, 252, 241, 0.3);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.pagina-soul .stream-badge-fixo ,
+.pagina-soul-rascunho .stream-badge-fixo {
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid #113CCF;
+    background: rgba(17, 60, 207, 0.2);
+    color: #82a0ff;
+}
+
+.pagina-detalhes .stream-badge-fixo {
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid #E50914;
+    background: rgba(229, 9, 20, 0.2);
+    color: #ff4d58;
+}
+
+.pagina-soul-rascunho .detalhe-wrapper {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    background: rgba(31, 40, 51, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 40px;
+}
+
+.pagina-soul-rascunho .poster-detalhe {
+    background: #11141a;
+    border-radius: 12px;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 800px) {
+    .pagina-soul-rascunho .detalhe-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* Visibilidade controlada pelos filtros em script.js. */
+.category-section.is-visible {
+    display: block;
+}
+
+.category-section.is-hidden {
+    display: none;
+}
+
+/* Rodapé da página inicial */
+.pagina-inicial .site-footer {
+    margin-top: 45px;
+    padding: 26px 0 12px;
+    border-top: 1px solid rgba(102, 252, 241, 0.22);
+    color: #d7d9dc;
+}
+
+.pagina-inicial .footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.pagina-inicial .footer-brand {
+    max-width: 560px;
+}
+
+.pagina-inicial .footer-logo {
+    color: #66fcf1;
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.pagina-inicial .footer-logo-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    border: 2px solid #66fcf1;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.pagina-inicial .footer-brand p {
+    max-width: 540px;
+    color: #d5d9dd;
+    line-height: 1.6;
+}
+
+.pagina-inicial .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 130px;
+}
+
+.pagina-inicial .footer-nav h2 {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.pagina-inicial .footer-nav a {
+    color: #d5d9dd;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.pagina-inicial .footer-nav a:hover {
+    color: #66fcf1;
+}
+
+.pagina-inicial .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 24px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    color: #d0d8dd;
+    font-size: 0.9rem;
+}
+
+.pagina-inicial .footer-made span {
+    color: #66fcf1;
+}
+
+@media (max-width: 600px) {
+    .pagina-inicial .footer-content,
+    .pagina-inicial .footer-bottom {
+        flex-direction: column;
+    }
 }
