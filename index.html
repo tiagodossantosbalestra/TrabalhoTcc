@@ -1,897 +1,1078 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR" class="pagina-inicial">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Streaming</title>
-    <link rel="stylesheet" href="style.css">
+<head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portal de Streaming</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <div class="container">
-
-        <nav class="site-header" aria-label="Navegação principal">
-            <a class="site-brand" href="index.html">
-                <span class="site-brand-icon" aria-hidden="true">▣</span>
-                <span>Portal do Streaming</span>
-            </a>
-
-            <div class="site-nav-links">
-                <a href="index.html">Início</a>
-                <a href="#filmes">Filmes</a>
-                <a href="#contexto">Contexto</a>
-            </div>
-        </nav>
-
-        <header>
-            <h1>Portal de Streaming & Entretenimento</h1>
-            <p>Conheça o contexto histórico e navegue pelas indicações exclusivas.</p>
-            <a class="hero-cta" href="#filmes">Explorar recomendações</a>
-        </header>
-
-        <main>
-
-            <h2 id="contexto" class="secao-titulo">Contexto Histórico</h2>
-
-            <div class="grid-plataformas">
-
-                <section class="card-plataforma">
-                    <h3 class="netflix-txt">
-                        <span class="platform-logo logo-netflix">N</span>
-                        Netflix
-                    </h3>
-
-                    <p>
-                        Fundada em 1997 como locadora de DVDs físicos entregues via correio.
-                        Foi pioneira em lançar a tecnologia VoD (Video on Demand) no ano de 2007
-                        e a produzir conteúdo autoral escalável no mundo todo.
-                    </p>
-                </section>
-
-                <section class="card-plataforma">
-                    <h3 class="prime-txt">
-                        <span class="platform-logo logo-prime">▶</span>
-                        Prime Video
-                    </h3>
-
-                    <p>
-                        Braço de mídia fundado pela gigante Amazon. Cresceu exponencialmente
-                        ao unificar entretenimento e entregas rápidas na assinatura Prime,
-                        destacando-se pela compra de estúdios clássicos como a MGM.
-                    </p>
-                </section>
-
-                <section class="card-plataforma">
-                    <h3 class="disney-txt">
-                        <span class="platform-logo logo-disney">D+</span>
-                        Disney+
-                    </h3>
-
-                    <p>
-                        Lançada em 2019, focou estrategicamente em suas propriedades intelectuais
-                        exclusivas de grande apelo nostálgico e comercial, incluindo estúdios
-                        de animação, heróis e sagas de ficção científica.
-                    </p>
-                </section>
-
-                <section class="card-plataforma">
-                    <h3 class="max-txt">
-                        <span class="platform-logo logo-max">M</span>
-                        Max
-                    </h3>
-
-                    <p>
-                        Serviço de streaming da Warner Bros. Discovery, reunindo filmes, séries
-                        e produções de marcas como HBO, Warner Bros., DC e Cartoon Network
-                        em um só catálogo.
-                    </p>
-                </section>
 
-            </div>
+<div class="container">
 
-
-            <h2 id="filmes" class="secao-titulo secao-minhas-recomendacoes">
-                Minhas Recomendações
-            </h2>
-
-            <div class="lista-filmes">
-
-                <!-- =====================================================
-                     FILME 1 - POKÉMON
-                ====================================================== -->
-
-                <article class="filme-card recomendado">
-
-                    <div class="filme-poster-shill">
-                        <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnsDN4Ekd3KD4oKQIaDqIkBh1BDoFBBKEF2mgvCWkVvA&s=10"
-                            alt="Pôster de Pokémon: O Pesadelo de Darkrai">
-                    </div>
-
-                    <div class="filme-conteudo">
+    <!-- =========================
+         NAVEGAÇÃO
+    ========================== -->
 
-                        <div>
+    <nav class="site-header" aria-label="Navegação principal">
 
-                            <div class="filme-topo">
+        <a class="site-brand" href="index.html">
+            <span class="site-brand-icon" aria-hidden="true">▣</span>
+            <span>Portal do Streaming</span>
+        </a>
 
-                                <h3 class="filme-titulo">
-                                    Pokémon: O Pesadelo de Darkrai
-                                </h3>
+        <div class="site-nav-links">
+            <a href="index.html">Início</a>
+            <a href="#filmes">Filmes</a>
+            <a href="#contexto">Contexto</a>
+        </div>
 
-                                <span class="stream-badge b-netflix">
-                                    Netflix
-                                </span>
+    </nav>
 
-                            </div>
 
-                            <div class="filme-meta">
-                                <span class="nota-tag">★ 6.0</span>
-                                <span>•</span>
-                                <span>Animação / Aventura / Fantasia</span>
-                                <span>•</span>
-                                <span>1h 30m</span>
-                            </div>
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
 
-                            <p class="filme-sinopse">
-                                Ash, Dawn e Brock chegam à cidade de Alamos, onde estranhos
-                                acontecimentos começam a ocorrer. A região é ameaçada por uma
-                                batalha entre os lendários Pokémon Dialga e Palkia, que acaba
-                                distorcendo o espaço e o tempo.
+    <header>
 
-                                Enquanto os moradores acreditam que o misterioso Darkrai é
-                                responsável pelos pesadelos e pela destruição, Ash descobre
-                                que o Pokémon está tentando proteger a cidade. Para impedir
-                                uma catástrofe, ele precisa enfrentar a disputa entre os
-                                lendários Pokémon e descobrir a verdadeira intenção de Darkrai.
-                            </p>
+        <h1>Portal de Streaming &amp; Entretenimento</h1>
 
-                        </div>
+        <p>
+            Conheça o contexto histórico e navegue pelas indicações exclusivas.
+        </p>
 
-                        <button
-                            class="btn-detalhes"
-                            data-filme="pokemon">
-                            Ver Mais Detalhes
-                        </button>
+        <a class="hero-cta" href="#filmes">
+            Explorar recomendações
+        </a>
 
-                    </div>
+    </header>
 
-                </article>
 
+    <main>
 
-                <!-- =====================================================
-                     FILME 2 - MAD MAX
-                ====================================================== -->
+        <!-- =========================
+             CONTEXTO HISTÓRICO
+        ========================== -->
 
-                <article class="filme-card recomendado">
+        <h2 id="contexto" class="secao-titulo">
+            Contexto Histórico
+        </h2>
 
-                    <div class="filme-poster-shill">
-                        <img
-                            src="imagem/madmax.jpeg"
-                            alt="Pôster de Mad Max">
-                    </div>
 
-                    <div class="filme-conteudo">
+        <div class="grid-plataformas">
 
-                        <div>
+            <section class="card-plataforma">
 
-                            <div class="filme-topo">
+                <h3 class="netflix-txt">
+                    <span class="platform-logo logo-netflix">N</span>
+                    Netflix
+                </h3>
 
-                                <h3 class="filme-titulo">
-                                    Mad Max
-                                </h3>
+                <p>
+                    Fundada em 1997 como locadora de DVDs físicos entregues via
+                    correio. Foi pioneira em lançar a tecnologia VoD (Video on
+                    Demand) no ano de 2007 e a produzir conteúdo autoral
+                    escalável no mundo todo.
+                </p>
 
-                                <span class="stream-badge b-prime">
-                                    Prime Video
-                                </span>
+            </section>
 
-                            </div>
 
-                            <div class="filme-meta">
-                                <span class="nota-tag">★ 6.8</span>
-                                <span>•</span>
-                                <span>Ação / Ficção Científica</span>
-                                <span>•</span>
-                                <span>1h 28m</span>
-                            </div>
+            <section class="card-plataforma">
 
-                            <p class="filme-sinopse">
-                                Em um futuro distópico marcado pela escassez de combustível
-                                e pelo colapso da sociedade, o policial Max Rockatansky
-                                tenta sobreviver em uma Austrália dominada pela violência
-                                e por gangues de estrada.
+                <h3 class="prime-txt">
+                    <span class="platform-logo logo-prime">▶</span>
+                    Prime Video
+                </h3>
 
-                                Depois de perder pessoas importantes para uma gangue
-                                extremamente violenta, Max decide enfrentar seus inimigos
-                                e buscar vingança em um mundo onde a lei praticamente
-                                deixou de existir.
-                            </p>
+                <p>
+                    Braço de mídia fundado pela gigante Amazon. Cresceu
+                    exponencialmente ao unificar entretenimento e entregas
+                    rápidas na assinatura Prime, destacando-se pela compra de
+                    estúdios clássicos como a MGM.
+                </p>
 
-                        </div>
+            </section>
 
-                        <button
-                            class="btn-detalhes"
-                            data-filme="madmax">
-                            Ver Mais Detalhes
-                        </button>
 
-                    </div>
+            <section class="card-plataforma">
 
-                </article>
+                <h3 class="disney-txt">
+                    <span class="platform-logo logo-disney">D+</span>
+                    Disney+
+                </h3>
 
+                <p>
+                    Lançada em 2019, focou estrategicamente em suas
+                    propriedades intelectuais exclusivas de grande apelo
+                    nostálgico e comercial, incluindo estúdios de animação,
+                    heróis e sagas de ficção científica.
+                </p>
 
-                <!-- =====================================================
-                     FILME 3 - GLASS ONION
-                ====================================================== -->
+            </section>
 
-                <article class="filme-card">
 
-                    <div class="filme-poster-shill">
-                        <img
-                            src="imagem/glassonion.jpeg"
-                            alt="Pôster de Glass Onion: Um Mistério Knives Out">
-                    </div>
+            <section class="card-plataforma">
 
-                    <div class="filme-conteudo">
+                <h3 class="max-txt">
+                    <span class="platform-logo logo-max">M</span>
+                    Max
+                </h3>
 
-                        <div>
+                <p>
+                    Serviço de streaming da Warner Bros. Discovery, reunindo
+                    filmes, séries e produções de marcas como HBO, Warner
+                    Bros., DC e Cartoon Network em um só catálogo.
+                </p>
 
-                            <div class="filme-topo">
+            </section>
 
-                                <h3 class="filme-titulo">
-                                    Glass Onion: Um Mistério Knives Out
-                                </h3>
+        </div>
 
-                                <span class="stream-badge b-netflix">
-                                    Netflix
-                                </span>
 
-                            </div>
+        <!-- =========================
+             FILMES
+        ========================== -->
 
-                            <div class="filme-meta">
-                                <span class="nota-tag">★ 7.1</span>
-                                <span>•</span>
-                                <span>Mistério / Comédia / Crime</span>
-                                <span>•</span>
-                                <span>2h 19m</span>
-                            </div>
+        <h2 id="filmes" class="secao-titulo secao-minhas-recomendacoes">
+            Minhas Recomendações
+        </h2>
 
-                            <p class="filme-sinopse">
-                                O detetive Benoit Blanc viaja para uma ilha particular
-                                na Grécia após receber um convite do bilionário da
-                                tecnologia Miles Bron.
 
-                                O encontro reúne um grupo de antigos amigos para uma
-                                espécie de jogo de investigação, mas a brincadeira
-                                rapidamente se transforma em um verdadeiro caso de
-                                assassinato. Blanc precisa descobrir quem está por trás
-                                do crime enquanto todos escondem seus próprios segredos.
-                            </p>
+        <div class="lista-filmes">
 
-                        </div>
 
-                        <button
-                            class="btn-detalhes"
-                            data-filme="glass-onion">
-                            Ver Mais Detalhes
-                        </button>
+            <!-- =====================================================
+                 FILME 1 — POKÉMON
+            ====================================================== -->
 
-                    </div>
+            <article class="filme-card recomendado">
 
-                </article>
+                <div class="filme-poster-shill">
 
-
-                <!-- =====================================================
-                     FILME 4 - O PACTO
-                ====================================================== -->
-
-                <article class="filme-card">
-
-                    <div class="filme-poster-shill">
-                        <img
-                            src="imagem/pacto.jpeg"
-                            alt="Pôster de O Pacto">
-                    </div>
-
-                    <div class="filme-conteudo">
-
-                        <div>
-
-                            <div class="filme-topo">
-
-                                <h3 class="filme-titulo">
-                                    O Pacto
-                                </h3>
-
-                                <span class="stream-badge b-prime">
-                                    Prime Video
-                                </span>
-
-                            </div>
-
-                            <div class="filme-meta">
-                                <span class="nota-tag">★ 7.5</span>
-                                <span>•</span>
-                                <span>Ação / Drama / Guerra</span>
-                                <span>•</span>
-                                <span>2h 03m</span>
-                            </div>
-
-                            <p class="filme-sinopse">
-                                Durante o conflito no Afeganistão, o sargento John Kinley
-                                trabalha com o intérprete local Ahmed em uma missão perigosa.
-                                Quando a equipe é atacada, Ahmed coloca sua própria vida
-                                em risco para salvar Kinley.
-
-                                Depois de retornar aos Estados Unidos, Kinley descobre que
-                                Ahmed e sua família continuam escondidos no Afeganistão.
-                                Determinado a cumprir a promessa que fez ao intérprete,
-                                ele retorna à zona de guerra para ajudá-lo a escapar.
-                            </p>
-
-                        </div>
-
-                        <button
-                            class="btn-detalhes"
-                            data-filme="pacto">
-                            Ver Mais Detalhes
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- =====================================================
-                     FILME 5 - SOUL
-                ====================================================== -->
-
-                <article class="filme-card">
-
-                    <div class="filme-poster-shill">
-                        <img
-                            src="imagem/soul.jpeg"
-                            alt="Pôster de Soul">
-                    </div>
-
-                    <div class="filme-conteudo">
-
-                        <div>
-
-                            <div class="filme-topo">
-
-                                <h3 class="filme-titulo">
-                                    Soul
-                                </h3>
-
-                                <span class="stream-badge b-disney">
-                                    Disney+
-                                </span>
-
-                            </div>
-
-                            <div class="filme-meta">
-                                <span class="nota-tag">★ 8.0</span>
-                                <span>•</span>
-                                <span>Animação / Família / Fantasia</span>
-                                <span>•</span>
-                                <span>1h 40m</span>
-                            </div>
-
-                            <p class="filme-sinopse">
-                                Joe Gardner é um professor de música que sonha em se tornar
-                                um grande pianista de jazz. Quando finalmente consegue uma
-                                oportunidade importante para realizar seu sonho, sofre um
-                                acidente e sua alma acaba sendo transportada para uma
-                                dimensão espiritual.
-
-                                Lá, Joe conhece a jovem alma 22 e começa a enxergar a vida
-                                de uma maneira diferente, descobrindo que o verdadeiro
-                                sentido da existência pode estar nos pequenos momentos
-                                do cotidiano.
-                            </p>
-
-                        </div>
-
-                        <button
-                            class="btn-detalhes"
-                            data-filme="soul">
-                            Ver Mais Detalhes
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- =====================================================
-                     FILME 6 - GUERRA DOS MUNDOS
-                ====================================================== -->
-
-                <article class="filme-card">
-
-                    <div class="filme-poster-shill">
-
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjg2YmE1ZDYtMWUzZi00NDgxLTk2M2ItYTVkNzNmN2ZlYWFjXkEyXkFqcGc@._V1_.jpg"
-                            alt="Pôster de Guerra dos Mundos">
-
-                    </div>
-
-                    <div class="filme-conteudo">
-
-                        <div>
-
-                            <div class="filme-topo">
-
-                                <h3 class="filme-titulo">
-                                    Guerra dos Mundos
-                                </h3>
-
-                                <span class="stream-badge b-prime">
-                                    Prime Video
-                                </span>
-
-                            </div>
-
-                            <div class="filme-meta">
-
-                                <span class="nota-tag">★ 6.6</span>
-
-                                <span>•</span>
-
-                                <span>Ficção Científica / Ação / Suspense</span>
-
-                                <span>•</span>
-
-                                <span>1h 57m</span>
-
-                            </div>
-
-                            <p class="filme-sinopse">
-                                Guerra dos Mundos acompanha Ray Ferrier, um trabalhador
-                                divorciado que precisa proteger seus dois filhos quando
-                                uma invasão alienígena começa de forma repentina.
-
-                                Gigantescas máquinas de guerra, conhecidas como Tripods,
-                                emergem do solo e começam a destruir cidades e atacar
-                                a população. Em meio ao caos, Ray tenta atravessar um
-                                país devastado para manter seus filhos seguros.
-
-                                Enquanto a humanidade luta para sobreviver, os invasores
-                                acabam sendo derrotados por microrganismos terrestres
-                                aos quais não possuem imunidade.
-                            </p>
-
-                        </div>
-
-                        <button
-                            class="btn-detalhes"
-                            data-filme="guerra-dos-mundos">
-                            Ver Mais Detalhes
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- =====================================================
-                     FILME 7 - O RESGATE DO SOLDADO RYAN
-                ====================================================== -->
-
-                <article class="filme-card">
-
-                    <div class="filme-poster-shill">
-
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BZWVkYTBlODQtMjFiMi00ODExLWJhMzUtNGY5MDg0MDQwZTM4XkEyXkFqcGc@._V1_.jpg"
-                            alt="Pôster de O Resgate do Soldado Ryan">
-
-                    </div>
-
-                    <div class="filme-conteudo">
-
-                        <div>
-
-                            <div class="filme-topo">
-
-                                <h3 class="filme-titulo">
-                                    O Resgate do Soldado Ryan
-                                </h3>
-
-                                <span class="stream-badge b-prime">
-                                    Paramount+
-                                </span>
-
-                            </div>
-
-                            <div class="filme-meta">
-
-                                <span class="nota-tag">★ 8.6</span>
-
-                                <span>•</span>
-
-                                <span>Drama / Guerra / Ação</span>
-
-                                <span>•</span>
-
-                                <span>2h 49m</span>
-
-                            </div>
-
-                            <p class="filme-sinopse">
-                                Durante a Segunda Guerra Mundial, logo após o desembarque
-                                das tropas aliadas na Normandia no Dia D, o Capitão John
-                                Miller recebe uma missão especial.
-
-                                Ele deve liderar um pequeno grupo de soldados através
-                                do território inimigo para localizar o Soldado James
-                                Francis Ryan, cujos três irmãos morreram em combate.
-
-                                A missão tem como objetivo levar Ryan de volta para casa,
-                                poupando sua mãe de perder o último de seus filhos.
-                                Enquanto avançam pelas linhas inimigas, os soldados
-                                enfrentam batalhas e passam a questionar o enorme
-                                sacrifício necessário para salvar apenas um homem.
-                            </p>
-
-                        </div>
-
-                        <button
-                            class="btn-detalhes"
-                            data-filme="resgate-soldado-ryan">
-                            Ver Mais Detalhes
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- =====================================================
-                     FILME 8 - O EXTERMINADOR DO FUTURO 2
-                ====================================================== -->
-
-                <article class="filme-card">
-
-                    <div class="filme-poster-shill">
-
-                        <img
-                            src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=107657"
-                            alt="Pôster de O Exterminador do Futuro 2: O Julgamento Final">
-
-                    </div>
-
-                    <div class="filme-conteudo">
-
-                        <div>
-
-                            <div class="filme-topo">
-
-                                <h3 class="filme-titulo">
-                                    O Exterminador do Futuro 2: O Julgamento Final
-                                </h3>
-
-                                <span class="stream-badge b-prime">
-                                    Prime Video
-                                </span>
-
-                            </div>
-
-                            <div class="filme-meta">
-
-                                <span class="nota-tag">★ 8.6</span>
-
-                                <span>•</span>
-
-                                <span>Ação / Ficção Científica / Aventura</span>
-
-                                <span>•</span>
-
-                                <span>2h 17m</span>
-
-                            </div>
-
-                            <p class="filme-sinopse">
-                                Anos depois dos acontecimentos do primeiro filme, Sarah
-                                Connor está internada em uma instituição psiquiátrica
-                                enquanto seu filho, John Connor, se torna o principal
-                                alvo de uma nova ameaça.
-
-                                Um Exterminador modelo T-800 é enviado de volta ao passado,
-                                mas desta vez sua missão é proteger John. Ao mesmo tempo,
-                                um novo e mais avançado modelo, o T-1000, é enviado para
-                                eliminar o jovem antes que ele possa se tornar o futuro
-                                líder da resistência humana.
-
-                                Sarah, John e o Exterminador precisam trabalhar juntos
-                                para impedir o desenvolvimento da inteligência artificial
-                                que poderá provocar uma guerra entre humanos e máquinas.
-                            </p>
-
-                        </div>
-
-                        <button
-                            class="btn-detalhes"
-                            data-filme="terminator-2">
-                            Ver Mais Detalhes
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- =====================================================
-                     FILME 9 - NARUTO SHIPPUDEN: LAÇOS
-                ====================================================== -->
-
-                <article class="filme-card">
-
-                    <div class="filme-poster-shill">
-
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BNTE2ODAyNTkxNl5BMl5BanBnXkFtZTgwNTAzMjA2MDE@._V1_FMjpg_UX1000_.jpg"
-                            alt="Pôster de Naruto Shippuden: O Filme - Laços">
-
-                    </div>
-
-                    <div class="filme-conteudo">
-
-                        <div>
-
-                            <div class="filme-topo">
-
-                                <h3 class="filme-titulo">
-                                    Naruto Shippuden: O Filme — Laços
-                                </h3>
-
-                                <span class="stream-badge b-netflix">
-                                    Não disponível em streaming no Brasil
-                                </span>
-
-                            </div>
-
-                            <div class="filme-meta">
-
-                                <span class="nota-tag">★ 6.8</span>
-
-                                <span>•</span>
-
-                                <span>Anime / Ação / Fantasia</span>
-
-                                <span>•</span>
-
-                                <span>1h 38m</span>
-
-                            </div>
-
-                            <p class="filme-sinopse">
-                                A Vila Oculta da Folha é atacada por misteriosos ninjas
-                                vindos do País do Céu. Durante o ataque, Naruto conhece
-                                Amaru, um jovem aprendiz de médico que procura seu mestre.
-
-                                Naruto descobre que os acontecimentos estão relacionados
-                                a uma antiga ameaça e decide ajudar Amaru a encontrar
-                                seu mestre e impedir que uma nova guerra destrua a região.
-
-                                Durante a missão, Naruto também acaba cruzando novamente
-                                com Sasuke Uchiha, que aparece diante dele por motivos
-                                próprios. Os antigos companheiros acabam formando uma
-                                aliança temporária para enfrentar o inimigo.
-                            </p>
-
-                        </div>
-
-                        <button
-                            class="btn-detalhes"
-                            data-filme="naruto-lacos">
-                            Ver Mais Detalhes
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- =====================================================
-                     FILME 10 - CÍRCULO DE FOGO
-                ====================================================== -->
-
-                <article class="filme-card">
-
-                    <div class="filme-poster-shill">
-
-                        <img
-                            src="https://ingresso-a.akamaihd.net/img/cinema/cartaz/220-cartaz.jpg"
-                            alt="Pôster de Círculo de Fogo">
-
-                    </div>
-
-                    <div class="filme-conteudo">
-
-                        <div>
-
-                            <div class="filme-topo">
-
-                                <h3 class="filme-titulo">
-                                    Círculo de Fogo
-                                </h3>
-
-                                <span class="stream-badge b-prime">
-                                    Prime Video
-                                </span>
-
-                            </div>
-
-                            <div class="filme-meta">
-
-                                <span class="nota-tag">★ 6.9</span>
-
-                                <span>•</span>
-
-                                <span>Ação / Ficção Científica / Aventura</span>
-
-                                <span>•</span>
-
-                                <span>2h 11m</span>
-
-                            </div>
-
-                            <p class="filme-sinopse">
-                                Monstruosas criaturas alienígenas chamadas Kaijus surgem
-                                de uma fenda localizada no fundo do Oceano Pacífico e
-                                começam a atacar as cidades do mundo.
-
-                                Para enfrentar os monstros, a humanidade cria enormes
-                                robôs chamados Jaegers. Cada máquina é controlada por
-                                dois pilotos que precisam conectar suas mentes para
-                                comandá-la.
-
-                                Quando a ameaça se torna cada vez maior, o ex-piloto
-                                Raleigh Becket e a jovem piloto Mako Mori são escolhidos
-                                para controlar um antigo Jaeger. Juntos, eles precisam
-                                enfrentar os Kaijus e tentar impedir que a humanidade
-                                seja destruída.
-                            </p>
-
-                        </div>
-
-                        <button
-                            class="btn-detalhes"
-                            data-filme="circulo-de-fogo">
-                            Ver Mais Detalhes
-                        </button>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </main>
-
-
-        <!-- =============================================================
-             RODAPÉ
-        ============================================================= -->
-
-        <footer class="site-footer">
-
-            <div class="footer-content">
-
-                <div class="footer-brand">
-
-                    <div class="footer-logo">
-                        <span class="footer-logo-icon">▣</span>
-                        Portal do Streaming
-                    </div>
-
-                    <p>
-                        Recomendações de filmes selecionadas para ajudar você
-                        a escolher o próximo filme da sua noite.
-                    </p>
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnsDN4Ekd3KD4oKQIaDqIkBh1BDoFBBKEF2mgvCWkVvA&s=10"
+                        alt="Pôster de Pokémon: O Pesadelo de Darkrai"
+                    >
 
                 </div>
 
 
-                <nav class="footer-nav" aria-label="Navegação do rodapé">
+                <div class="filme-conteudo">
 
-                    <h2>Navegação</h2>
+                    <div>
 
-                    <a href="index.html">Início</a>
+                        <div class="filme-topo">
 
-                    <a href="#filmes">Filmes</a>
+                            <h3 class="filme-titulo">
+                                Pokémon: O Pesadelo de Darkrai
+                            </h3>
 
-                    <a href="#contexto">Contexto</a>
+                            <span class="stream-badge b-netflix">
+                                Netflix
+                            </span>
 
-                </nav>
+                        </div>
+
+
+                        <div class="filme-meta">
+
+                            <span class="nota-tag">
+                                ★ 6.0
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                Animação / Aventura
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                1h 30m
+                            </span>
+
+                        </div>
+
+
+                        <p class="filme-sinopse">
+                            Ash, Dawn e Brock chegam à Cidade Alamos, onde
+                            acontecimentos misteriosos ameaçam a população.
+                            A batalha entre os lendários Dialga e Palkia
+                            provoca uma distorção no espaço e no tempo,
+                            enquanto o Pokémon Darkrai é injustamente
+                            acusado pelos problemas que acontecem na cidade.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="btn-detalhes"
+                        type="button"
+                        data-filme="pokemon"
+                    >
+                        Ver Mais Detalhes
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================================================
+                 FILME 2 — MAD MAX
+            ====================================================== -->
+
+            <article class="filme-card recomendado">
+
+                <div class="filme-poster-shill">
+
+                    <img
+                        src="imagem/madmax.jpeg"
+                        alt="Pôster de Mad Max"
+                    >
+
+                </div>
+
+
+                <div class="filme-conteudo">
+
+                    <div>
+
+                        <div class="filme-topo">
+
+                            <h3 class="filme-titulo">
+                                Mad Max
+                            </h3>
+
+                            <span class="stream-badge b-prime">
+                                Prime Video
+                            </span>
+
+                        </div>
+
+
+                        <div class="filme-meta">
+
+                            <span class="nota-tag">
+                                ★ 6.8
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                Ação / Ficção científica
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                1h 28m
+                            </span>
+
+                        </div>
+
+
+                        <p class="filme-sinopse">
+                            Em um futuro distópico, a sociedade entrou em
+                            colapso e a violência domina as estradas.
+                            O policial Max Rockatansky perde sua família
+                            para uma gangue violenta e passa a buscar
+                            vingança em um mundo dominado pelo caos.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="btn-detalhes"
+                        type="button"
+                        data-filme="madmax"
+                    >
+                        Ver Mais Detalhes
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================================================
+                 FILME 3 — GLASS ONION
+            ====================================================== -->
+
+            <article class="filme-card">
+
+                <div class="filme-poster-shill">
+
+                    <img
+                        src="imagem/glassonion.jpeg"
+                        alt="Pôster de Glass Onion: Um Mistério Knives Out"
+                    >
+
+                </div>
+
+
+                <div class="filme-conteudo">
+
+                    <div>
+
+                        <div class="filme-topo">
+
+                            <h3 class="filme-titulo">
+                                Glass Onion: Um Mistério Knives Out
+                            </h3>
+
+                            <span class="stream-badge b-netflix">
+                                Netflix
+                            </span>
+
+                        </div>
+
+
+                        <div class="filme-meta">
+
+                            <span class="nota-tag">
+                                ★ 7.1
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                Mistério / Comédia
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                2h 19m
+                            </span>
+
+                        </div>
+
+
+                        <p class="filme-sinopse">
+                            O detetive Benoit Blanc viaja até uma ilha
+                            particular na Grécia após receber um convite
+                            para participar de um misterioso jogo
+                            organizado pelo bilionário Miles Bron.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="btn-detalhes"
+                        type="button"
+                        data-filme="glass-onion"
+                    >
+                        Ver Mais Detalhes
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================================================
+                 FILME 4 — O PACTO
+            ====================================================== -->
+
+            <article class="filme-card">
+
+                <div class="filme-poster-shill">
+
+                    <img
+                        src="imagem/pacto.jpeg"
+                        alt="Pôster de O Pacto"
+                    >
+
+                </div>
+
+
+                <div class="filme-conteudo">
+
+                    <div>
+
+                        <div class="filme-topo">
+
+                            <h3 class="filme-titulo">
+                                O Pacto (Guy Ritchie's The Covenant)
+                            </h3>
+
+                            <span class="stream-badge b-prime">
+                                Prime Video
+                            </span>
+
+                        </div>
+
+
+                        <div class="filme-meta">
+
+                            <span class="nota-tag">
+                                ★ 7.5
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                Ação / Drama / Guerra
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                2h 03m
+                            </span>
+
+                        </div>
+
+
+                        <p class="filme-sinopse">
+                            Durante a guerra no Afeganistão, o sargento
+                            John Kinley sobrevive a uma emboscada graças
+                            à ajuda do intérprete local Ahmed. Depois de
+                            retornar aos Estados Unidos, Kinley descobre
+                            que Ahmed e sua família ainda estão em perigo
+                            e decide voltar ao Afeganistão.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="btn-detalhes"
+                        type="button"
+                        data-filme="pacto"
+                    >
+                        Ver Mais Detalhes
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================================================
+                 FILME 5 — SOUL
+            ====================================================== -->
+
+            <article class="filme-card">
+
+                <div class="filme-poster-shill">
+
+                    <img
+                        src="imagem/soul.jpeg"
+                        alt="Pôster de Soul"
+                    >
+
+                </div>
+
+
+                <div class="filme-conteudo">
+
+                    <div>
+
+                        <div class="filme-topo">
+
+                            <h3 class="filme-titulo">
+                                Soul
+                            </h3>
+
+                            <span class="stream-badge b-disney">
+                                Disney+
+                            </span>
+
+                        </div>
+
+
+                        <div class="filme-meta">
+
+                            <span class="nota-tag">
+                                ★ 8.0
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                Animação / Família / Fantasia
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                1h 40m
+                            </span>
+
+                        </div>
+
+
+                        <p class="filme-sinopse">
+                            Joe Gardner é um professor de música que sonha
+                            em se tornar um grande músico de jazz. Quando
+                            finalmente consegue uma oportunidade importante,
+                            sofre um acidente e sua alma vai parar em um
+                            mundo espiritual, onde começa a refletir sobre
+                            o verdadeiro significado da vida.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="btn-detalhes"
+                        type="button"
+                        data-filme="soul"
+                    >
+                        Ver Mais Detalhes
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================================================
+                 FILME 6 — GUERRA DOS MUNDOS
+            ====================================================== -->
+
+            <article class="filme-card">
+
+                <div class="filme-poster-shill">
+
+                    <img
+                        src="https://m.media-amazon.com/images/M/MV5BMjg2YmE1ZDYtMWUzZi00NDgxLTk2M2ItYTVkNzNmN2ZlYWFjXkEyXkFqcGc@._V1_.jpg"
+                        alt="Pôster de Guerra dos Mundos"
+                    >
+
+                </div>
+
+
+                <div class="filme-conteudo">
+
+                    <div>
+
+                        <div class="filme-topo">
+
+                            <h3 class="filme-titulo">
+                                Guerra dos Mundos
+                            </h3>
+
+                            <span class="stream-badge b-prime">
+                                Prime Video
+                            </span>
+
+                        </div>
+
+
+                        <div class="filme-meta">
+
+                            <span class="nota-tag">
+                                ★ 6.5
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                Ficção científica / Ação / Drama
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                1h 56m
+                            </span>
+
+                        </div>
+
+
+                        <p class="filme-sinopse">
+                            Ray Ferrier é um homem divorciado que tenta
+                            se aproximar dos seus dois filhos. Tudo muda
+                            quando uma invasão alienígena começa e enormes
+                            máquinas de guerra conhecidas como Tripods
+                            surgem da terra. Em meio ao caos, Ray precisa
+                            proteger seus filhos e encontrar um caminho
+                            para sobreviver.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="btn-detalhes"
+                        type="button"
+                        data-filme="guerra-dos-mundos"
+                    >
+                        Ver Mais Detalhes
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================================================
+                 FILME 7 — O RESGATE DO SOLDADO RYAN
+            ====================================================== -->
+
+            <article class="filme-card">
+
+                <div class="filme-poster-shill">
+
+                    <img
+                        src="https://m.media-amazon.com/images/M/MV5BZWVkYTBlODQtMjFiMi00ODExLWJhMzUtNGY5MDg0MDQwZTM4XkEyXkFqcGc@._V1_.jpg"
+                        alt="Pôster de O Resgate do Soldado Ryan"
+                    >
+
+                </div>
+
+
+                <div class="filme-conteudo">
+
+                    <div>
+
+                        <div class="filme-topo">
+
+                            <h3 class="filme-titulo">
+                                O Resgate do Soldado Ryan
+                            </h3>
+
+                            <span class="stream-badge b-prime">
+                                Prime Video
+                            </span>
+
+                        </div>
+
+
+                        <div class="filme-meta">
+
+                            <span class="nota-tag">
+                                ★ 8.6
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                Guerra / Drama
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                2h 49m
+                            </span>
+
+                        </div>
+
+
+                        <p class="filme-sinopse">
+                            Durante a Segunda Guerra Mundial, após o
+                            desembarque na Normandia no Dia D, o Capitão
+                            John Miller recebe a missão de liderar um
+                            grupo de soldados pelas linhas inimigas para
+                            localizar e resgatar o Soldado James Ryan.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="btn-detalhes"
+                        type="button"
+                        data-filme="resgate-soldado-ryan"
+                    >
+                        Ver Mais Detalhes
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================================================
+                 FILME 8 — POSTER ORIGINAL DO TERCEIRO NOVO FILME
+            ====================================================== -->
+
+            <article class="filme-card">
+
+                <div class="filme-poster-shill">
+
+                    <img
+                        src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=107657"
+                        alt="Pôster do filme"
+                    >
+
+                </div>
+
+
+                <div class="filme-conteudo">
+
+                    <div>
+
+                        <div class="filme-topo">
+
+                            <h3 class="filme-titulo">
+                                Filme do pôster
+                            </h3>
+
+                            <span class="stream-badge b-prime">
+                                Prime Video
+                            </span>
+
+                        </div>
+
+
+                        <div class="filme-meta">
+
+                            <span class="nota-tag">
+                                ★ 7.7
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                Drama / Guerra
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                1h 34m
+                            </span>
+
+                        </div>
+
+
+                        <p class="filme-sinopse">
+                            Este campo corresponde ao filme representado
+                            pelo pôster fornecido no código original.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="btn-detalhes"
+                        type="button"
+                        data-filme="filme-3"
+                    >
+                        Ver Mais Detalhes
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================================================
+                 FILME 9 — NARUTO: LAÇOS
+            ====================================================== -->
+
+            <article class="filme-card">
+
+                <div class="filme-poster-shill">
+
+                    <img
+                        src="https://m.media-amazon.com/images/M/MV5BNTE2ODAyNTkxNl5BMl5BanBnXkFtZTgwNTAzMjA2MDE@._V1_FMjpg_UX1000_.jpg"
+                        alt="Pôster de Naruto Shippuden: O Filme — Laços"
+                    >
+
+                </div>
+
+
+                <div class="filme-conteudo">
+
+                    <div>
+
+                        <div class="filme-topo">
+
+                            <h3 class="filme-titulo">
+                                Naruto Shippuden: O Filme — Laços
+                            </h3>
+
+                            <span class="stream-badge b-disney">
+                                Max
+                            </span>
+
+                        </div>
+
+
+                        <div class="filme-meta">
+
+                            <span class="nota-tag">
+                                ★ 6.2
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                Animação / Ação / Aventura
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                1h 35m
+                            </span>
+
+                        </div>
+
+
+                        <p class="filme-sinopse">
+                            A Vila da Folha é atacada por misteriosos ninjas
+                            do País do Céu. Durante o conflito, Naruto
+                            conhece Amaru, um jovem aprendiz de médico,
+                            e descobre que o ataque está ligado a uma
+                            ameaça muito maior. Em meio à batalha, Naruto
+                            acaba cruzando novamente o caminho de Sasuke.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="btn-detalhes"
+                        type="button"
+                        data-filme="naruto-lacos"
+                    >
+                        Ver Mais Detalhes
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================================================
+                 FILME 10 — CÍRCULO DE FOGO
+            ====================================================== -->
+
+            <article class="filme-card">
+
+                <div class="filme-poster-shill">
+
+                    <img
+                        src="https://ingresso-a.akamaihd.net/img/cinema/cartaz/220-cartaz.jpg"
+                        alt="Pôster de Círculo de Fogo"
+                    >
+
+                </div>
+
+
+                <div class="filme-conteudo">
+
+                    <div>
+
+                        <div class="filme-topo">
+
+                            <h3 class="filme-titulo">
+                                Círculo de Fogo
+                            </h3>
+
+                            <span class="stream-badge b-disney">
+                                Max
+                            </span>
+
+                        </div>
+
+
+                        <div class="filme-meta">
+
+                            <span class="nota-tag">
+                                ★ 6.9
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                Ação / Ficção científica
+                            </span>
+
+                            <span>•</span>
+
+                            <span>
+                                2h 11m
+                            </span>
+
+                        </div>
+
+
+                        <p class="filme-sinopse">
+                            Monstruosas criaturas alienígenas chamadas
+                            Kaijus surgem de uma fenda no fundo do oceano
+                            e começam a atacar as cidades do planeta.
+                            Para combatê-las, a humanidade cria enormes
+                            robôs chamados Jaegers, controlados por dois
+                            pilotos conectados mentalmente.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="btn-detalhes"
+                        type="button"
+                        data-filme="circulo-de-fogo"
+                    >
+                        Ver Mais Detalhes
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    <span class="footer-logo-icon">▣</span>
+                    Portal do Streaming
+                </div>
+
+                <p>
+                    Recomendações de filmes selecionadas para ajudar você
+                    a escolher o próximo filme da sua noite.
+                </p>
 
             </div>
 
 
-            <div class="footer-bottom">
+            <nav class="footer-nav" aria-label="Navegação do rodapé">
 
-                <span>
-                    © 2026 Portal do Streaming. Todos os direitos reservados.
-                </span>
+                <h2>Navegação</h2>
 
-                <span class="footer-made">
-                    Feito com
-                    <span aria-hidden="true">♥</span>
-                    para quem ama cinema.
-                </span>
+                <a href="index.html">Início</a>
 
-            </div>
+                <a href="#filmes">Filmes</a>
 
-        </footer>
+                <a href="#contexto">Contexto</a>
 
-    </div>
+            </nav>
 
-
-    <!-- =============================================================
-         MODAL DE DETALHES
-    ============================================================= -->
-
-    <div
-        class="detalhes-modal"
-        id="detalhes-modal"
-        aria-hidden="true">
-
-        <div
-            class="detalhes-modal-backdrop"
-            data-fechar-modal>
         </div>
 
 
-        <section
-            class="detalhes-card"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="modal-titulo">
+        <div class="footer-bottom">
 
-            <button
-                class="modal-fechar"
-                type="button"
-                data-fechar-modal
-                aria-label="Fechar detalhes">
-                &times;
-            </button>
+            <span>
+                © 2026 Portal do Streaming. Todos os direitos reservados.
+            </span>
 
+            <span class="footer-made">
+                Feito com
+                <span aria-hidden="true">♥</span>
+                para quem ama cinema.
+            </span>
 
-            <img
-                class="modal-poster"
-                id="modal-poster"
-                alt="">
+        </div>
+
+    </footer>
+
+</div>
 
 
-            <h2 id="modal-titulo"></h2>
+
+<!-- =====================================================
+     MODAL DE DETALHES
+====================================================== -->
+
+<div
+    class="detalhes-modal"
+    id="detalhes-modal"
+    aria-hidden="true"
+>
+
+    <div
+        class="detalhes-modal-backdrop"
+        data-fechar-modal
+    ></div>
 
 
-            <div
-                class="modal-meta"
-                id="modal-meta">
-            </div>
+    <section
+        class="detalhes-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-titulo"
+    >
+
+        <button
+            class="modal-fechar"
+            type="button"
+            data-fechar-modal
+            aria-label="Fechar detalhes"
+        >
+            &times;
+        </button>
 
 
-            <h3>Sinopse Completa</h3>
+        <img
+            class="modal-poster"
+            id="modal-poster"
+            alt=""
+        >
 
 
-            <p id="modal-sinopse"></p>
+        <h2 id="modal-titulo"></h2>
 
 
-            <div
-                class="modal-ficha"
-                id="modal-ficha">
-            </div>
-
-        </section>
-
-    </div>
+        <div
+            class="modal-meta"
+            id="modal-meta"
+        ></div>
 
 
-    <script src="script.js"></script>
+        <h3>
+            Sinopse Completa
+        </h3>
+
+
+        <p id="modal-sinopse"></p>
+
+
+        <div
+            class="modal-ficha"
+            id="modal-ficha"
+        ></div>
+
+    </section>
+
+</div>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
 
 </body>
 
