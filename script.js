@@ -1,189 +1,125 @@
-```javascript
 document.addEventListener('DOMContentLoaded', () => {
 
     const filmes = {
-
-        // ============================================================
-        // POKÉMON
-        // ============================================================
 
         pokemon: {
             titulo: 'Pokémon: O Pesadelo de Darkrai',
             imagem: 'imagem/pokemon1.jpeg',
             plataforma: 'netflix',
-            meta: '★ 6.0 · Animação / Aventura / Fantasia · 1h 30m · Netflix',
-            sinopse: 'Ash, Dawn e Brock chegam à Cidade de Alamos, onde acontecimentos misteriosos começam a ocorrer. Uma batalha entre os lendários Dialga e Palkia ameaça distorcer o espaço e o tempo. Enquanto os moradores culpam Darkrai pelos pesadelos e pela destruição, Ash descobre que o Pokémon está tentando proteger a cidade e impedir uma catástrofe.',
-            ficha: 'Pokémon: O Pesadelo de Darkrai · 2007 · Animação / Aventura / Fantasia'
+            meta: '★ 6.0 · Animação / Aventura · 1h 30m · Netflix',
+            sinopse: 'Ash, Dawn e Brock chegam à Cidade Alamos, onde uma série de acontecimentos misteriosos ameaça a população. A batalha entre os lendários Dialga e Palkia provoca uma distorção no espaço e no tempo, enquanto o Pokémon Darkrai é injustamente acusado pelos problemas que acontecem na cidade.',
+            ficha: 'Direção: Kunihiko Yuyama · Pokémon · 2007'
         },
-
-
-        // ============================================================
-        // MAD MAX
-        // ============================================================
 
         madmax: {
             titulo: 'Mad Max',
             imagem: 'imagem/madmax.jpeg',
             plataforma: 'prime',
-            meta: '★ 6.8 · Ação / Ficção Científica · 1h 28m · Prime Video',
-            sinopse: 'Em um futuro distópico marcado pelo colapso da sociedade e pela escassez de combustível, o policial Max Rockatansky tenta sobreviver em uma Austrália dominada pela violência e por gangues de estrada. Depois de perder pessoas importantes, Max decide enfrentar seus inimigos e buscar vingança.',
-            ficha: 'Mad Max · 1979 · Direção: George Miller'
+            meta: '★ 6.8 · Ação / Ficção científica · 1h 28m · Prime Video',
+            sinopse: 'Em um futuro distópico, a sociedade entrou em colapso e a violência domina as estradas. O policial Max Rockatansky perde sua família para uma gangue violenta e passa a buscar vingança em um mundo dominado pelo caos e pela escassez.',
+            ficha: 'Direção: George Miller · 1979 · Prime Video'
         },
-
-
-        // ============================================================
-        // GLASS ONION
-        // ============================================================
 
         'glass-onion': {
             titulo: 'Glass Onion: Um Mistério Knives Out',
             imagem: 'imagem/glassonion.jpeg',
             plataforma: 'netflix',
-            meta: '★ 7.1 · Mistério / Comédia / Crime · 2h 19m · Netflix',
-            sinopse: 'O detetive Benoit Blanc viaja para uma ilha particular na Grécia após receber um convite do bilionário da tecnologia Miles Bron. O encontro reúne um grupo de amigos para um jogo de investigação, mas a brincadeira rapidamente se transforma em um verdadeiro caso de assassinato. Blanc precisa descobrir quem está por trás do crime enquanto todos escondem seus próprios segredos.',
-            ficha: 'Glass Onion · 2022 · Direção e roteiro: Rian Johnson · Netflix'
+            meta: '★ 7.1 · Mistério / Comédia · 2h 19m · Netflix',
+            sinopse: 'O detetive Benoit Blanc viaja até uma ilha particular na Grécia após receber um convite para participar de um misterioso jogo organizado pelo bilionário Miles Bron. O encontro reúne antigos amigos, mas uma morte transforma a brincadeira em uma investigação real.',
+            ficha: 'Direção e roteiro: Rian Johnson · 2022 · Netflix'
         },
 
-
-        // ============================================================
-        // O PACTO
-        // ============================================================
-
         pacto: {
-            titulo: 'O Pacto',
+            titulo: "O Pacto (Guy Ritchie's The Covenant)",
             imagem: 'imagem/pacto.jpeg',
             plataforma: 'prime',
             meta: '★ 7.5 · Ação / Drama / Guerra · 2h 03m · Prime Video',
-            sinopse: 'Durante o conflito no Afeganistão, o sargento John Kinley trabalha com o intérprete local Ahmed em uma missão perigosa. Quando a equipe é atacada, Ahmed arrisca a própria vida para salvar Kinley. Depois de retornar aos Estados Unidos, Kinley descobre que Ahmed e sua família continuam escondidos no Afeganistão e decide voltar à zona de guerra para cumprir sua promessa.',
-            ficha: 'O Pacto · 2023 · Direção: Guy Ritchie · Prime Video'
+            sinopse: 'Durante a guerra no Afeganistão, o sargento John Kinley sobrevive a uma emboscada graças à ajuda do intérprete local Ahmed. Depois de retornar aos Estados Unidos, Kinley descobre que Ahmed e sua família ainda estão em perigo e decide voltar ao Afeganistão para cumprir sua promessa.',
+            ficha: 'Direção: Guy Ritchie · 2023 · Prime Video'
         },
-
-
-        // ============================================================
-        // SOUL
-        // ============================================================
 
         soul: {
             titulo: 'Soul',
             imagem: 'imagem/soul.jpeg',
             plataforma: 'disney',
             meta: '★ 8.0 · Animação / Família / Fantasia · 1h 40m · Disney+',
-            sinopse: 'Joe Gardner é um professor de música que sonha em se tornar um grande pianista de jazz. Quando finalmente consegue uma oportunidade importante para realizar seu sonho, sofre um acidente e sua alma é transportada para uma dimensão espiritual. Lá, Joe conhece a alma 22 e começa a enxergar a vida de uma maneira diferente.',
-            ficha: 'Soul · 2020 · Direção: Pete Docter e Kemp Powers · Pixar / Disney+'
+            sinopse: 'Joe Gardner é um professor de música que sonha em se tornar um grande músico de jazz. Quando finalmente consegue uma oportunidade importante, sofre um acidente e sua alma vai parar em um mundo espiritual. Lá, ele conhece uma alma chamada 22 e começa a refletir sobre o verdadeiro significado da vida.',
+            ficha: 'Direção: Pete Docter e Kemp Powers · Pixar · 2020'
         },
 
-
-        // ============================================================
-        // GUERRA DOS MUNDOS
-        // ============================================================
-
-        'guerra-dos-mundos': {
+        guerra-dos-mundos: {
             titulo: 'Guerra dos Mundos',
             imagem: 'https://m.media-amazon.com/images/M/MV5BMjg2YmE1ZDYtMWUzZi00NDgxLTk2M2ItYTVkNzNmN2ZlYWFjXkEyXkFqcGc@._V1_.jpg',
             plataforma: 'prime',
-            meta: '★ 6.6 · Ficção Científica / Ação / Suspense · 1h 57m · Prime Video',
-            sinopse: 'Ray Ferrier é um trabalhador divorciado que precisa proteger seus dois filhos quando uma invasão alienígena começa de forma repentina. Gigantescas máquinas de guerra conhecidas como Tripods emergem do solo e começam a destruir cidades. Em meio ao caos, Ray atravessa um país devastado tentando manter seus filhos seguros enquanto a humanidade luta para sobreviver.',
-            ficha: 'Guerra dos Mundos · 2005 · Direção: Steven Spielberg · Ficção Científica'
+            meta: '★ 6.5 · Ficção científica / Ação / Drama · 1h 56m · Prime Video',
+            sinopse: 'Ray Ferrier é um homem divorciado que tenta se aproximar dos seus dois filhos. Tudo muda quando uma invasão alienígena começa e enormes máquinas de guerra conhecidas como Tripods surgem da terra. Em meio ao caos, Ray precisa proteger seus filhos e encontrar um caminho para sobreviver enquanto a humanidade luta contra uma ameaça aparentemente invencível.',
+            ficha: 'Direção: Steven Spielberg · 2005 · Tom Cruise'
         },
-
-
-        // ============================================================
-        // O RESGATE DO SOLDADO RYAN
-        // ============================================================
 
         'resgate-soldado-ryan': {
             titulo: 'O Resgate do Soldado Ryan',
             imagem: 'https://m.media-amazon.com/images/M/MV5BZWVkYTBlODQtMjFiMi00ODExLWJhMzUtNGY5MDg0MDQwZTM4XkEyXkFqcGc@._V1_.jpg',
             plataforma: 'prime',
-            meta: '★ 8.6 · Drama / Guerra / Ação · 2h 49m · Paramount+ / Prime Video',
-            sinopse: 'Durante a Segunda Guerra Mundial, logo após o desembarque das tropas aliadas na Normandia no Dia D, o Capitão John Miller recebe a missão de liderar um grupo de soldados através do território inimigo para localizar e resgatar o Soldado James Francis Ryan. Os três irmãos de Ryan foram mortos em combate, e a missão busca levá-lo de volta para casa. Conforme avançam pelas linhas inimigas, os soldados enfrentam batalhas e passam a questionar o enorme sacrifício necessário para salvar apenas um homem.',
-            ficha: 'O Resgate do Soldado Ryan · 1998 · Direção: Steven Spielberg'
+            meta: '★ 8.6 · Guerra / Drama · 2h 49m · Prime Video',
+            sinopse: 'Durante a Segunda Guerra Mundial, após o desembarque na Normandia no Dia D, o Capitão John Miller recebe a missão de liderar um grupo de soldados pelas linhas inimigas para localizar e resgatar o Soldado James Ryan. Os três irmãos de Ryan morreram em combate, e o Exército decide levá-lo de volta para casa para poupar sua mãe de mais uma perda.',
+            ficha: 'Direção: Steven Spielberg · 1998 · Tom Hanks'
         },
 
-
-        // ============================================================
-        // O EXTERMINADOR DO FUTURO 2
-        // ============================================================
-
-        'terminator-2': {
-            titulo: 'O Exterminador do Futuro 2: O Julgamento Final',
+        'filme-3': {
+            titulo: 'O Menino do Pijama Listrado',
             imagem: 'https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=107657',
             plataforma: 'prime',
-            meta: '★ 8.6 · Ação / Ficção Científica / Aventura · 2h 17m · Prime Video',
-            sinopse: 'John Connor se tornou o principal alvo de uma nova ameaça enviada do futuro. Um Exterminador T-800 é enviado de volta ao passado para proteger o jovem, enquanto um modelo mais avançado, o T-1000, recebe a missão de eliminá-lo. Sarah Connor, John e o Exterminador precisam trabalhar juntos para impedir o futuro conflito entre humanos e máquinas.',
-            ficha: 'O Exterminador do Futuro 2 · 1991 · Direção: James Cameron'
+            meta: '★ 7.7 · Drama / Guerra · 1h 34m · Prime Video',
+            sinopse: 'Durante a Segunda Guerra Mundial, Bruno, um menino de oito anos, muda-se com sua família para uma região próxima a um campo de concentração. Explorando os arredores, ele conhece Shmuel, um garoto judeu que vive do outro lado de uma cerca. A amizade entre os dois cresce apesar das circunstâncias e das barreiras impostas pela guerra.',
+            ficha: 'Direção: Mark Herman · 2008 · Drama histórico'
         },
-
-
-        // ============================================================
-        // NARUTO SHIPPUDEN: LAÇOS
-        // ============================================================
 
         'naruto-lacos': {
             titulo: 'Naruto Shippuden: O Filme — Laços',
             imagem: 'https://m.media-amazon.com/images/M/MV5BNTE2ODAyNTkxNl5BMl5BanBnXkFtZTgwNTAzMjA2MDE@._V1_FMjpg_UX1000_.jpg',
-            plataforma: 'netflix',
-            meta: '★ 6.8 · Anime / Ação / Fantasia · 1h 38m · Streaming variável',
-            sinopse: 'A Vila Oculta da Folha é atacada por misteriosos ninjas vindos do País do Céu. Durante o ataque, Naruto conhece Amaru, um jovem aprendiz de médico que procura seu mestre. Naruto decide ajudá-lo e descobre que os acontecimentos estão ligados a uma antiga ameaça. Durante a missão, ele também cruza novamente com Sasuke, formando com ele uma aliança temporária para enfrentar o inimigo.',
-            ficha: 'Naruto Shippuden: O Filme — Laços · 2008 · Anime / Ação / Fantasia'
+            plataforma: 'max',
+            meta: '★ 6.2 · Animação / Ação / Aventura · 1h 35m · Max',
+            sinopse: 'A Vila da Folha é atacada por misteriosos ninjas do País do Céu. Durante o conflito, Naruto conhece Amaru, um jovem aprendiz de médico, e descobre que o ataque está ligado a uma ameaça muito maior. Em meio à batalha, Naruto acaba cruzando novamente o caminho de Sasuke, formando uma aliança inesperada para enfrentar o inimigo.',
+            ficha: 'Direção: Hajime Kamegaki · 2008 · Naruto Shippuden'
         },
-
-
-        // ============================================================
-        // CÍRCULO DE FOGO
-        // ============================================================
 
         'circulo-de-fogo': {
             titulo: 'Círculo de Fogo',
             imagem: 'https://ingresso-a.akamaihd.net/img/cinema/cartaz/220-cartaz.jpg',
-            plataforma: 'prime',
-            meta: '★ 6.9 · Ação / Ficção Científica / Aventura · 2h 11m · Prime Video',
-            sinopse: 'Monstruosas criaturas alienígenas conhecidas como Kaijus surgem de uma fenda no Oceano Pacífico e começam a atacar a humanidade. Para enfrentá-los, os países constroem gigantescos robôs chamados Jaegers, controlados mentalmente por dois pilotos. O ex-piloto Raleigh Becket e a jovem piloto Mako Mori precisam controlar um antigo Jaeger em uma missão desesperada para enfrentar os monstros e impedir a destruição da humanidade.',
-            ficha: 'Círculo de Fogo · 2013 · Direção: Guillermo del Toro'
+            plataforma: 'max',
+            meta: '★ 6.9 · Ação / Ficção científica · 2h 11m · Max',
+            sinopse: 'Monstruosas criaturas alienígenas chamadas Kaijus surgem de uma fenda no fundo do oceano e começam a atacar as cidades do planeta. Para combatê-las, a humanidade cria enormes robôs chamados Jaegers, controlados por dois pilotos conectados mentalmente. Quando a ameaça aumenta, um ex-piloto e uma jovem recruta precisam assumir o controle de um antigo Jaeger em uma última tentativa de salvar a humanidade.',
+            ficha: 'Direção: Guillermo del Toro · 2013 · Ficção científica'
         },
-
-
-        // ============================================================
-        // FILME EXTRA - BRANCA DE NEVE
-        // Mantido porque já existia no seu script original.
-        // ============================================================
 
         'branca-de-neve-e-o-cacador': {
             titulo: 'Branca de Neve e o Caçador',
             imagem: 'imagem/branca-de-neve-e-o-cacador.jpeg',
             plataforma: 'netflix',
             meta: '★ 6.1 · Ação / Fantasia / Aventura · 2h 07m · Netflix / Prime Video',
-            sinopse: 'A rainha má Ravenna domina o reino e descobre que o coração da princesa Branca de Neve é a chave para sua imortalidade. Quando a jovem foge, um caçador é enviado para capturá-la, mas acaba se tornando seu mentor e aliado em uma guerra para retomar o trono.',
-            ficha: 'Branca de Neve e o Caçador · 2012 · Ação / Fantasia / Aventura'
+            sinopse: 'A rainha má Ravenna domina o reino e descobre que o coração da princesa Branca de Neve é a chave para sua imortalidade. Quando a jovem foge, um caçador é enviado para capturá-la, mas acaba se tornando seu aliado em uma luta para derrotar a rainha e recuperar o reino.',
+            ficha: 'Direção: Rupert Sanders · 2012 · Kristen Stewart / Charlize Theron'
         }
     };
 
 
-    // ============================================================
-    // ELEMENTOS DO MODAL
-    // ============================================================
-
     const modal = document.querySelector('#detalhes-modal');
-    const poster = document.querySelector('#modal-poster');
-    const titulo = document.querySelector('#modal-titulo');
-    const meta = document.querySelector('#modal-meta');
-    const sinopse = document.querySelector('#modal-sinopse');
-    const ficha = document.querySelector('#modal-ficha');
-    const botaoFechar = document.querySelector('.modal-fechar');
 
 
-    // ============================================================
-    // ABRIR MODAL
-    // ============================================================
+    function abrirModal(idFilme) {
 
-    const abrirModal = filme => {
-
-        const dados = filmes[filme];
+        const dados = filmes[idFilme];
 
         if (!dados) {
-            console.error(`Filme não encontrado: ${filme}`);
+            console.error(`Filme não encontrado: ${idFilme}`);
             return;
         }
+
+        const poster = document.querySelector('#modal-poster');
+        const titulo = document.querySelector('#modal-titulo');
+        const meta = document.querySelector('#modal-meta');
+        const sinopse = document.querySelector('#modal-sinopse');
+        const ficha = document.querySelector('#modal-ficha');
 
         poster.src = dados.imagem;
         poster.alt = `Pôster de ${dados.titulo}`;
@@ -199,51 +135,47 @@ document.addEventListener('DOMContentLoaded', () => {
         ficha.className = `modal-ficha plataforma-${dados.plataforma}`;
 
         modal.classList.add('aberto');
-
         modal.setAttribute('aria-hidden', 'false');
 
-        document.body.classList.add('modal-aberto');
+        document.body.style.overflow = 'hidden';
+
+        const botaoFechar = document.querySelector('.modal-fechar');
 
         if (botaoFechar) {
             botaoFechar.focus();
         }
-    };
+    }
 
 
-    // ============================================================
-    // FECHAR MODAL
-    // ============================================================
-
-    const fecharModal = () => {
+    function fecharModal() {
 
         modal.classList.remove('aberto');
-
         modal.setAttribute('aria-hidden', 'true');
 
-        document.body.classList.remove('modal-aberto');
-    };
+        document.body.style.overflow = '';
+    }
 
 
-    // ============================================================
-    // BOTÕES "VER MAIS DETALHES"
-    // ============================================================
+    /*
+     * BOTÕES "VER MAIS DETALHES"
+     */
 
-    document.querySelectorAll('[data-filme]').forEach(botao => {
+    document.querySelectorAll('.btn-detalhes').forEach(botao => {
 
-        botao.addEventListener('click', () => {
+        botao.addEventListener('click', function () {
 
-            const filme = botao.dataset.filme;
+            const idFilme = this.getAttribute('data-filme');
 
-            abrirModal(filme);
+            abrirModal(idFilme);
 
         });
 
     });
 
 
-    // ============================================================
-    // ELEMENTOS QUE FECHAM O MODAL
-    // ============================================================
+    /*
+     * FECHAR MODAL
+     */
 
     document.querySelectorAll('[data-fechar-modal]').forEach(elemento => {
 
@@ -252,39 +184,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // ============================================================
-    // BOTÃO X
-    // ============================================================
-
-    if (botaoFechar) {
-
-        botaoFechar.addEventListener('click', fecharModal);
-
-    }
-
-
-    // ============================================================
-    // TECLA ESC
-    // ============================================================
+    /*
+     * TECLA ESC
+     */
 
     document.addEventListener('keydown', evento => {
 
-        if (evento.key === 'Escape') {
-
+        if (evento.key === 'Escape' && modal.classList.contains('aberto')) {
             fecharModal();
-
         }
 
     });
 
 
-    // ============================================================
-    // FILTROS
-    // ============================================================
+    /*
+     * FILTROS
+     */
 
     const filterButtons = document.querySelectorAll('.filter-btn');
     const sections = document.querySelectorAll('.category-section');
-
 
     filterButtons.forEach(button => {
 
@@ -296,28 +214,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             button.classList.add('active');
 
-            const filterValue =
-                button.getAttribute('data-filter');
-
+            const filterValue = button.getAttribute('data-filter');
 
             sections.forEach(section => {
 
-                const category =
-                    section.getAttribute('data-category');
+                const category = section.getAttribute('data-category');
 
                 const visible =
                     filterValue === 'all' ||
                     filterValue === category;
 
-                section.classList.toggle(
-                    'is-visible',
-                    visible
-                );
-
-                section.classList.toggle(
-                    'is-hidden',
-                    !visible
-                );
+                section.classList.toggle('is-visible', visible);
+                section.classList.toggle('is-hidden', !visible);
 
             });
 
@@ -326,4 +234,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
-```
