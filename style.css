@@ -9,7 +9,8 @@
 }
 
 .pagina-inicial body {
-    background-color: #525a7a;
+    /* background-color: #525a7a; */
+    background-color: black;
     color: #ffffff;
     padding: 40px 20px;
 }
