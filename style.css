@@ -899,3 +899,298 @@
         flex-direction: column;
     }
 }
+
+/* =========================================================
+   BOTÃO DE ALTERNÂNCIA DE TEMA
+========================================================= */
+
+.btn-tema {
+    background: rgba(102, 252, 241, 0.12);
+    border: 1px solid rgba(102, 252, 241, 0.5);
+    color: #66fcf1;
+    padding: 7px 14px;
+    border-radius: 7px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-tema:hover {
+    background: rgba(102, 252, 241, 0.22);
+}
+
+.topo-detalhes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.topo-detalhes .btn-voltar {
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   TEMA CLARO (Ativado via html[data-theme="light"])
+========================================================= */
+
+html[data-theme="light"] .btn-tema {
+    background: #ffffff;
+    border-color: #cbd5e1;
+    color: #0f766e;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+}
+
+html[data-theme="light"] .btn-tema:hover {
+    background: #f1f5f9;
+    border-color: #0f766e;
+}
+
+/* Fundos e textos globais */
+html[data-theme="light"].pagina-inicial body,
+html[data-theme="light"].pagina-meufilme1 body,
+html[data-theme="light"].pagina-pacto body,
+html[data-theme="light"].pagina-meufilme2 body,
+html[data-theme="light"].pagina-soul body,
+html[data-theme="light"].pagina-detalhes body,
+html[data-theme="light"].pagina-soul-rascunho body {
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+/* Cabeçalho e Navegação (Página Inicial) */
+html[data-theme="light"].pagina-inicial .site-header {
+    border-bottom-color: rgba(15, 118, 110, 0.2);
+}
+
+html[data-theme="light"].pagina-inicial .site-brand,
+html[data-theme="light"].pagina-inicial header h1 {
+    color: #0f766e;
+}
+
+html[data-theme="light"].pagina-inicial .site-brand-icon {
+    border-color: #0f766e;
+}
+
+html[data-theme="light"].pagina-inicial .site-nav-links a {
+    color: #334155;
+}
+
+html[data-theme="light"].pagina-inicial .site-nav-links a:hover {
+    color: #0f766e;
+}
+
+html[data-theme="light"].pagina-inicial header p {
+    color: #475569;
+}
+
+html[data-theme="light"].pagina-inicial .hero-cta {
+    color: #0f766e;
+    border-color: #0f766e;
+    background: rgba(15, 118, 110, 0.08);
+}
+
+html[data-theme="light"].pagina-inicial .hero-cta:hover {
+    background: rgba(15, 118, 110, 0.16);
+}
+
+/* Títulos de Seção */
+html[data-theme="light"].pagina-inicial h2.secao-titulo {
+    color: #0f172a;
+}
+
+html[data-theme="light"].pagina-inicial .secao-minhas-recomendacoes {
+    color: #0f766e;
+    border-left-color: #0f766e;
+}
+
+/* Cards de Plataformas */
+html[data-theme="light"].pagina-inicial .card-plataforma {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+html[data-theme="light"].pagina-inicial .card-plataforma p {
+    color: #475569;
+}
+
+html[data-theme="light"].pagina-inicial .max-txt {
+    color: #6d4aff;
+    border-bottom-color: #6d4aff;
+}
+
+/* Cards de Filmes */
+html[data-theme="light"].pagina-inicial .filme-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+html[data-theme="light"].pagina-inicial .filme-card.recomendado {
+    background: #ffffff;
+    border: 1px solid rgba(15, 118, 110, 0.45);
+}
+
+html[data-theme="light"].pagina-inicial .filme-card:hover {
+    border-color: #0f766e;
+    box-shadow: 0 10px 25px rgba(15, 118, 110, 0.12);
+}
+
+html[data-theme="light"].pagina-inicial .filme-titulo {
+    color: #0f172a;
+}
+
+html[data-theme="light"].pagina-inicial .filme-meta {
+    color: #64748b;
+}
+
+html[data-theme="light"].pagina-inicial .filme-sinopse {
+    color: #334155;
+}
+
+html[data-theme="light"].pagina-inicial .nota-tag,
+html[data-theme="light"].pagina-meufilme1 .nota-tag,
+html[data-theme="light"].pagina-meufilme2 .nota-tag {
+    color: #d97706;
+}
+
+/* Badges de Streaming no Tema Claro */
+html[data-theme="light"] .b-netflix {
+    background: rgba(229, 9, 20, 0.1);
+    color: #c80812;
+}
+
+html[data-theme="light"] .b-prime {
+    background: rgba(0, 168, 225, 0.12);
+    color: #0077a3;
+}
+
+html[data-theme="light"] .b-disney {
+    background: rgba(17, 60, 207, 0.1);
+    color: #113ccf;
+}
+
+/* Botão Ver Mais Detalhes */
+html[data-theme="light"].pagina-inicial .btn-detalhes {
+    border-color: #0f766e;
+    color: #0f766e;
+}
+
+html[data-theme="light"].pagina-inicial .btn-detalhes:hover {
+    background: rgba(15, 118, 110, 0.1);
+    box-shadow: 0 0 10px rgba(15, 118, 110, 0.15);
+}
+
+/* Modal da Página Inicial */
+html[data-theme="light"].pagina-inicial .detalhes-card {
+    background: #ffffff;
+    border-color: #cbd5e1;
+    color: #334155;
+}
+
+html[data-theme="light"].pagina-inicial .detalhes-card h2 {
+    color: #0f172a;
+}
+
+html[data-theme="light"].pagina-inicial .detalhes-card h3 {
+    color: #0f766e;
+}
+
+html[data-theme="light"].pagina-inicial .modal-ficha {
+    border-top-color: #e2e8f0;
+    color: #475569;
+}
+
+html[data-theme="light"].pagina-inicial .modal-fechar {
+    color: #475569;
+}
+
+/* Rodapé */
+html[data-theme="light"].pagina-inicial .site-footer {
+    border-top-color: #cbd5e1;
+    color: #475569;
+}
+
+html[data-theme="light"].pagina-inicial .footer-logo,
+html[data-theme="light"].pagina-inicial .footer-made span {
+    color: #0f766e;
+}
+
+html[data-theme="light"].pagina-inicial .footer-logo-icon {
+    border-color: #0f766e;
+}
+
+html[data-theme="light"].pagina-inicial .footer-nav h2 {
+    color: #0f172a;
+}
+
+html[data-theme="light"].pagina-inicial .footer-brand p,
+html[data-theme="light"].pagina-inicial .footer-nav a,
+html[data-theme="light"].pagina-inicial .footer-bottom {
+    color: #475569;
+}
+
+html[data-theme="light"].pagina-inicial .footer-nav a:hover {
+    color: #0f766e;
+}
+
+html[data-theme="light"].pagina-inicial .footer-bottom {
+    border-top-color: #cbd5e1;
+}
+
+/* Páginas Internas (detalhes.html, pacto, soul, etc.) */
+html[data-theme="light"] .btn-voltar {
+    border-color: #cbd5e1;
+    color: #334155;
+    background: #ffffff;
+}
+
+html[data-theme="light"] .btn-voltar:hover {
+    border-color: #0f766e;
+    color: #0f766e;
+}
+
+html[data-theme="light"] .detalhe-wrapper {
+    background: #ffffff;
+    border-color: #e2e8f0;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+}
+
+html[data-theme="light"] .info-header h1 {
+    color: #0f172a;
+}
+
+html[data-theme="light"] .meta-detalhe {
+    color: #64748b;
+}
+
+html[data-theme="light"] .nota-grande {
+    color: #d97706;
+}
+
+html[data-theme="light"] .divider {
+    background: #e2e8f0;
+}
+
+html[data-theme="light"] .bloco-texto h3 {
+    color: #0f766e;
+}
+
+html[data-theme="light"] .bloco-texto p {
+    color: #334155;
+}
+
+html[data-theme="light"] .ficha-tecnica {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+html[data-theme="light"] .ficha-item span {
+    color: #64748b;
+}
+
+html[data-theme="light"] .ficha-item p {
+    color: #0f172a;
+}

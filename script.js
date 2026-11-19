@@ -1,6 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     /* =========================================================
+       ALTERNÂNCIA DE TEMA (ESCURO PADRÃO / CLARO)
+    ========================================================= */
+
+    const btnTema = document.querySelector('#btn-tema');
+    const htmlElement = document.documentElement;
+
+    const aplicarTema = (tema) => {
+        if (tema === 'light') {
+            htmlElement.setAttribute('data-theme', 'light');
+            if (btnTema) btnTema.textContent = '🌙 Tema Escuro';
+        } else {
+            htmlElement.removeAttribute('data-theme');
+            if (btnTema) btnTema.textContent = '☀️ Tema Claro';
+        }
+    };
+
+    const temaSalvo = localStorage.getItem('tema-portal') || 'dark';
+    aplicarTema(temaSalvo);
+
+    if (btnTema) {
+        btnTema.addEventListener('click', () => {
+            const isLight = htmlElement.getAttribute('data-theme') === 'light';
+            const novoTema = isLight ? 'dark' : 'light';
+            localStorage.setItem('tema-portal', novoTema);
+            aplicarTema(novoTema);
+        });
+    }
+
+
+    /* =========================================================
        DADOS DOS FILMES
     ========================================================= */
 
@@ -138,12 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error(`Filme "${id}" não encontrado no script.js.`);
             return;
         }
-
-        /*
-         * Pega automaticamente o pôster do próprio card.
-         * Assim não precisamos repetir o endereço da imagem
-         * dentro do JavaScript.
-         */
 
         const card = botao.closest('.filme-card');
 

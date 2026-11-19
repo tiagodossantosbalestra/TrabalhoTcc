@@ -7,6 +7,12 @@
 
     <title>Portal de Streaming</title>
 
+    <script>
+        if (localStorage.getItem('tema-portal') === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -29,6 +35,9 @@
             <a href="index.html">Início</a>
             <a href="#filmes">Filmes</a>
             <a href="#contexto">Contexto</a>
+            <button id="btn-tema" class="btn-tema" type="button" aria-label="Alternar tema">
+                ☀️ Tema Claro
+            </button>
         </div>
 
     </nav>
@@ -1066,4 +1075,3 @@
 
 </body>
 </html>
-```

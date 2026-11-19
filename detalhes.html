@@ -7,6 +7,12 @@
 
     <title>Glass Onion - Detalhes | Portal de Streaming</title>
 
+    <script>
+        if (localStorage.getItem('tema-portal') === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,9 +20,15 @@
 
     <div class="container">
 
-        <a href="index.html" class="btn-voltar">
-            ← Voltar para a listagem
-        </a>
+        <div class="topo-detalhes">
+            <a href="index.html" class="btn-voltar">
+                ← Voltar para a listagem
+            </a>
+
+            <button id="btn-tema" class="btn-tema" type="button" aria-label="Alternar tema">
+                ☀️ Tema Claro
+            </button>
+        </div>
 
         <main class="detalhe-wrapper">
 
@@ -179,6 +191,8 @@
         </main>
 
     </div>
+
+    <script src="script.js"></script>
 
 </body>
 
